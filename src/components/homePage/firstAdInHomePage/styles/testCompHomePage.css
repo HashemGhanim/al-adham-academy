@@ -1,0 +1,122 @@
+.first-home-page-logo-and-text-container {
+    height: 800px;
+}
+.aladham-academy-text {
+    font-size: 50px;
+}
+
+.hello-word-under-aladham-academy-text {
+    font-size: 22px;
+}
+
+.subsrcibe-word-and-hello {
+    font-size: 20px;
+}
+
+.subsrcibe-homepage-button {
+    width: 60%;
+}
+.homepage-text-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    position: absolute;
+    height: 615px;
+}
+
+.homepage-image {
+    position: absolute;
+}
+
+@media (max-width: 1039px) {
+    .homepage-image img:first-child {
+        display: none;
+    }
+    .homepage-image img:last-child {
+        display: block;
+    }
+    .homepage-text-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        height: fit-content;
+        padding: 50px;
+    }
+    .homepage-image {
+        position: relative;
+    }
+    .first-home-page-logo-and-text-container {
+        height: fit-content;
+    }
+}
+
+@media (min-width: 1040px) {
+    .homepage-image img:first-child {
+        display: block;
+    }
+    .homepage-image img:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 599px){
+    .aladham-academy-text {
+        font-size: 35px;
+        padding-left: 30px;
+    }
+
+    .hello-word-under-aladham-academy-text {
+        font-size: 15px;
+    }
+
+    .subsrcibe-word-and-hello {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    .subsrcibe-homepage-button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 474px){
+    .aladham-academy-text {
+        font-size: 25px;
+        padding-left: 30px;
+    }
+
+    .hello-word-under-aladham-academy-text {
+        font-size: 9px;
+    }
+
+    .subsrcibe-word-and-hello {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        margin-top: 8px;
+    }
+
+    .subsrcibe-homepage-button a {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+    .subsrcibe-homepage-button span {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+    }
+
+}
