@@ -1,0 +1,57 @@
+.right-side-com-homPageBenefit {
+    width: 50%;
+    padding: 8px;
+}
+
+.right-side-com-homPageBenefit div h2 {
+    font-size: 50px;
+}
+
+.right-side-com-homPageBenefit div h6 {
+    font-size: 20px;
+}
+
+@media (max-width: 1124px){
+    .right-side-com-homPageBenefit {
+        width: 100%;
+    }
+    .right-side-com-homPageBenefit div h2 {
+        font-size: 35px;
+    }
+
+    .right-side-com-homPageBenefit div h6 {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width: 280px){
+    .right-side-com-homPageBenefit {
+        width: 100%;
+    }
+    .right-side-com-homPageBenefit div h2 {
+        font-size: 25px;
+    }
+
+    .right-side-com-homPageBenefit div h6 {
+        font-size: 13px;
+    }
+
+    .right-side-com-homPageBenefit div p {
+        font-size: 12px;
+    }
+
+    .right-side-com-homPageBenefit div a {
+        font-weight: normal;
+        font-size: small;
+        height: fit-content;
+        padding: 8px;
+    }
+    .right-side-com-homPageBenefit div .under-a-explore-button {
+        font-weight: normal;
+        font-size: small;
+        height: fit-content;
+        padding: 8px;
+    }
+
+}

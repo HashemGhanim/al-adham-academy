@@ -2,5 +2,27 @@
 @media (max-width: 1295px) {
     .cards-component-home-page-second-component {
         flex-wrap: wrap;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 475px) {
+    .cards-component-home-page-top-component img{
+        height: 65px;
+    }
+}
+
+@media (max-width: 405px) {
+    .cards-component-home-page-top-component img{
+        height: 45px;
+    }
+}
+
+@media (max-width: 310px) {
+    .cards-component-home-page-top-component div h1 {
+        font-size: x-large;
+    }
+    .cards-component-home-page-top-component div h2 {
+        font-size: small;
     }
 }

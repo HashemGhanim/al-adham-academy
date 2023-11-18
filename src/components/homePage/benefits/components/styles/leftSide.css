@@ -1,0 +1,107 @@
+.left-side-com-homPageBenefit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 400px;
+}
+
+.left-side-com-homPageBenefit .left-side-com-homPageBenefit-div:nth-child(2) {
+    background-color: #4c2d5e;
+    color: white;
+}
+
+.left-side-com-homPageBenefit .left-side-com-homPageBenefit-div {
+    width: calc(100% - 53%);
+    height: calc(100% - 55%);
+    border-style: solid;
+    border-color: #44627A;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+@media (max-width: 1124px){
+    .left-side-com-homPageBenefit {
+        width: 100%;
+    }
+    .left-side-com-homPageBenefit .left-side-com-homPageBenefit-div {
+
+    }
+}
+
+@media (max-width: 579px) {
+
+    .left-side-com-homPageBenefit .left-side-com-homPageBenefit-div {
+        width: 100%;
+        height: 175px;
+    }
+
+    .left-side-com-homPageBenefit {
+        height: 800px;
+    }
+
+    .left-side-com-homPageBenefit .left-side-com-homPageBenefit-div:nth-child(2){
+        order: -1;
+    }
+
+    .left-side-com-homPageBenefit .left-side-com-homPageBenefit-div:nth-child(1){
+        order: 0;
+    }
+    .left-side-com-homPageBenefit .left-side-com-homPageBenefit-div:nth-child(3){
+        order: 2;
+    }
+    .left-side-com-homPageBenefit .left-side-com-homPageBenefit-div:nth-child(4){
+        order: 1;
+    }
+}
+
+@media (max-width: 345px) {
+    .left-side-com-homPageBenefit-div .benefit-card-name {
+        font-size: large;
+    }
+    .left-side-com-homPageBenefit-div .benefit-card-explain {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 329px) {
+    .left-side-com-homPageBenefit-div .benefit-card-name {
+        font-size: 15px;
+    }
+    .left-side-com-homPageBenefit-div .benefit-card-explain {
+        font-size: 12px;
+    }
+    .left-side-com-homPageBenefit-div .icon-benefit-card {
+        width: 45px;
+        height: 45px;
+    }
+    .left-side-com-homPageBenefit-div .icon-benefit-card i {
+        font-size: large;
+    }
+}
+
+@media (max-width: 317px) {
+    .left-side-com-homPageBenefit-div .benefit-card-name {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 289px) {
+    .left-side-com-homPageBenefit-div .benefit-card-name {
+        font-size: 12px;
+    }
+    .left-side-com-homPageBenefit-div .benefit-card-explain {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 280px) {
+    .left-side-com-homPageBenefit-div .benefit-card-name {
+        font-size: 10px;
+    }
+    .left-side-com-homPageBenefit-div .benefit-card-explain {
+        font-size: 8px;
+    }
+}
+

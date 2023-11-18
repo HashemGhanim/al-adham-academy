@@ -1,0 +1,13 @@
+.home-page-benefits {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #fdf8ee;
+    padding: 60px;
+}
+
+@media (max-width: 1124px) {
+    .home-page-benefits {
+        display: block;
+    }
+}

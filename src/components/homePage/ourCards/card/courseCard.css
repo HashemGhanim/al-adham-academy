@@ -1,0 +1,14 @@
+
+@media (max-width: 1295px){
+    .cards-component-home-page-second-component-card {
+        width: 46%;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 646px){
+    .cards-component-home-page-second-component-card {
+        width: 96%;
+        margin-top: 50px;
+    }
+}

@@ -1,0 +1,115 @@
+
+
+
+@media (min-width: 1221px) and (max-width: 1310px){
+    .students-comments-home-page-card div:nth-child(1) p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1169px) and (max-width: 1220px) {
+    .students-comments-home-page-card div:nth-child(1) p{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 1066px) and (max-width: 1168px) {
+    .students-comments-home-page-card div:nth-child(1) p{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 925px) and (max-width: 1065px) {
+    .students-comments-home-page-card div:nth-child(1) p{
+        font-size: 12px;
+    }
+}
+@media (min-width: 1311px) and (max-width: 1375px) {
+    .students-comments-home-page-card div:nth-child(1) p{
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 599px) and (max-width: 924px) {
+    .students-comments-home-page-card div:nth-child(1) p{
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 598px) {
+    .students-comments-home-page-card div:nth-child(1) p{
+        font-size: 9px;
+    }
+}
+
+
+
+@media (max-width: 1310px) {
+    .students-comments-home-page-card div:last-child div:nth-child(1) img {
+        width: 42px;
+        height: 42px;
+        margin-left: 9px;
+    }
+
+    .students-comments-home-page-card div:last-child div:nth-child(2) div:nth-child(1) {
+        font-size: 16px;
+    }
+
+    .students-comments-home-page-card div:last-child div:nth-child(2) div:nth-child(2) {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1065px) {
+    .students-comments-home-page-card div:last-child div:nth-child(1) img {
+        width: 36px;
+        height: 36px;
+        margin-left: 9px;
+        margin-top: 5px;
+    }
+
+    .students-comments-home-page-card div:last-child div:nth-child(2) div:nth-child(1) {
+        font-size: 11px;
+    }
+
+    .students-comments-home-page-card div:last-child div:nth-child(2) div:nth-child(2) {
+        font-size: 9px;
+    }
+}
+
+
+@media (max-width: 1013px) {
+    .students-comments-home-page-card {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .students-comments-home-page-card {
+        width: 45%;
+    }
+
+}
+
+@media (max-width: 494px) {
+    .students-comments-home-page-card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 463px) {
+    .students-comments-home-page-card {
+        width: 60%;
+    }
+}
+
+@media (max-width: 370px) {
+    .students-comments-home-page-card {
+        width: 65%;
+    }
+}
+@media (max-width: 299px) {
+    .students-comments-home-page-card {
+        width: 80%;
+    }
+}

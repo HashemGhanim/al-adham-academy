@@ -1,0 +1,386 @@
+.one-experience-for-teacher:before {
+    content: "";
+    border-width:17px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    position: absolute;
+    z-index: 50;
+    right: -33px;
+    top:calc(50% - 17px);
+}
+.one-experience-for-teacher {
+    box-shadow: -3px 4px 25px 2px #b7b4b4;
+}
+
+.before-one-experience-for-teacher:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #E1E2E1;
+    position: absolute;
+    right: -15%;
+    top: calc(50% - 10px);
+    z-index: 50;
+}
+
+.before-one-experience-for-teacher:after {
+    content: "";
+    background-color: #E1E2E1;
+    height: 130%;
+    width: 2px;
+    position: absolute;
+    right: calc(-15% + 9px);
+    top: 50%;
+}
+
+.before-one-experience-for-teacher:last-child:after{
+    height: 0;
+    width: 0;
+}
+
+@media (max-width: 1434px) {
+    .one-experience-for-teacher div:first-child h2 {
+        font-size: 15px;
+    }
+
+    .one-experience-for-teacher div:first-child h1 {
+        font-size: 15px;
+    }
+    .one-experience-for-teacher div:last-child h2 {
+        font-size: 11px;
+    }
+
+    .one-experience-for-teacher div:last-child h3 {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 1335px) {
+    .before-one-experience-for-teacher:before {
+        right: -18%;
+    }
+    .before-one-experience-for-teacher:after {
+        right: calc(-18% + 9px);
+    }
+
+    .one-experience-for-teacher div:first-child h2 {
+        font-size: 13px;
+    }
+
+    .one-experience-for-teacher div:first-child h1 {
+        font-size: 14px;
+    }
+    .one-experience-for-teacher div:last-child h2 {
+        font-size: 10px;
+    }
+
+    .one-experience-for-teacher div:last-child h3 {
+        font-size: 10px;
+    }
+
+}
+
+
+@media (max-width: 1315px) {
+    .more-details-block-with-numbers div:nth-child(2) {
+        font-size: 13px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div {
+        font-size: 15px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div i {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1215px) {
+    .before-one-experience-for-teacher:before {
+        right: -20%;
+    }
+    .before-one-experience-for-teacher:after {
+        right: calc(-20% + 9px);
+    }
+}
+
+@media (max-width: 1190px) {
+    .one-experience-for-teacher div:first-child h2 {
+        font-size: 11px;
+    }
+
+    .one-experience-for-teacher div:first-child h1 {
+        font-size: 12px;
+    }
+    .one-experience-for-teacher div:last-child h2 {
+        font-size: 9px;
+    }
+
+    .one-experience-for-teacher div:last-child h3 {
+        font-size: 9px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(2) {
+        font-size: 11px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div {
+        font-size: 13px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div i {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 1210px){
+    .teacher-card div:nth-child(2) h1 {
+        font-size: large;
+    }
+    .teacher-card div:nth-child(2) h2 {
+        font-size: medium;
+    }
+    .teacher-card div:nth-child(2) p {
+        font-size: 12px;
+    }
+
+    .teacher-card div:nth-child(2) div h2 {
+        font-size: medium;
+    }
+    .teacher-card div:nth-child(2) div a {
+        font-size: x-large;
+    }
+}
+@media (max-width: 1055px) {
+    .one-experience-for-teacher div:first-child h2 {
+        font-size: 10px;
+    }
+
+    .one-experience-for-teacher div:first-child h1 {
+        font-size: 11px;
+    }
+    .one-experience-for-teacher div:last-child h2 {
+        font-size: 8px;
+    }
+
+    .one-experience-for-teacher div:last-child h3 {
+        font-size: 8px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(2) {
+        font-size: 10px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div {
+        font-size: 12px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div i {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 990px) {
+        .before-one-experience-for-teacher:before {
+            right: -25%;
+        }
+        .before-one-experience-for-teacher:after {
+            right: calc(-25% + 9px);
+            height: 150%;
+        }
+        .before-one-experience-for-teacher {
+            height: 18%;
+        }
+        .teacher-card div:nth-child(2) h1 {
+            font-size: 16px;
+        }
+        .teacher-card div:nth-child(2) h2 {
+            font-size: 13px;
+        }
+        .teacher-card div:nth-child(2) p {
+            font-size: 11px;
+        }
+
+        .teacher-card div:nth-child(2) div h2 {
+            font-size: 14px;
+        }
+        .teacher-card div:nth-child(2) div a {
+            font-size: 20px;
+        }
+}
+
+@media (max-width: 950px){
+    .more-details-block-with-numbers div:nth-child(2) {
+        font-size: 9px;
+        font-weight: bold;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div {
+        font-size: 9px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div i {
+        font-size: 9px;
+    }
+}
+
+
+@media (max-width: 940px) {
+    .inner-container-of-experinces {
+        align-items: center;
+    }
+    .teacher-info-container {
+        height: 1050px;
+        flex-direction: column-reverse;
+        margin-top: 25px;
+    }
+    .teacher-card {
+        width: 90%;
+        height: 35%;
+    }
+    .teacher-details-container {
+        width: 90%;
+        height: 62%;
+        flex-direction: column;
+    }
+
+    .before-one-experience-for-teacher:before {
+        right: -12%;
+    }
+    .before-one-experience-for-teacher:after {
+        right: calc(-12% + 9px);
+        height: 150%;
+    }
+    .more-about-teacher-main-component .border-between-two {
+        height: 1px;
+        width: 80%;
+        top:0;
+        right: 10%;
+    }
+    .main-experience-component {
+        width: 100%;
+    }
+    .more-about-teacher-main-component {
+        width: 100%;
+    }
+
+    .more-details-block-with-numbers div:nth-child(2) {
+        font-size: 11px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div {
+        font-size: 12px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div i {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 650px){
+    .before-one-experience-for-teacher {
+        width: 70%;
+    }
+    .before-one-experience-for-teacher:before {
+        right: -15%;
+    }
+    .before-one-experience-for-teacher:after {
+        right: calc(-15% + 9px);
+        height: 150%;
+    }
+}
+@media (max-width: 560px){
+    .before-one-experience-for-teacher {
+        width: 70%;
+    }
+    .before-one-experience-for-teacher:before {
+        right: -16%;
+    }
+    .before-one-experience-for-teacher:after {
+        right: calc(-16% + 9px);
+        height: 150%;
+    }
+}
+
+@media (max-width: 500px){
+    .before-one-experience-for-teacher:before {
+        right: -18%;
+    }
+    .before-one-experience-for-teacher:after {
+        right: calc(-18% + 9px);
+        height: 150%;
+    }
+}
+
+@media (max-width: 480px){
+    .before-one-experience-for-teacher {
+        width: 66%;
+    }
+    .before-one-experience-for-teacher:before {
+        right: -20%;
+    }
+    .before-one-experience-for-teacher:after {
+        right: calc(-20% + 9px);
+        height: 150%;
+    }
+}
+
+@media (max-width: 480px){
+    .before-one-experience-for-teacher {
+        width: 66%;
+    }
+    .before-one-experience-for-teacher:before {
+        right: -23%;
+    }
+    .before-one-experience-for-teacher:after {
+        right: calc(-23% + 9px);
+        height: 150%;
+    }
+}
+
+@media (max-width: 395px) {
+    .before-one-experience-for-teacher:before {
+        display: none;
+    }
+    .one-experience-for-teacher:before {
+        display: none;
+    }
+    .before-one-experience-for-teacher:after {
+        display: none;
+    }
+    .before-one-experience-for-teacher {
+        width: 90%;
+        justify-content: center;
+        align-items: center;
+    }
+    .one-experience-for-teacher {
+        margin: auto;
+    }
+    .more-details-block-with-numbers div:nth-child(2) {
+        font-size: 10px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div {
+        font-size: 11px;
+    }
+
+    .more-details-block-with-numbers div:nth-child(1) div i {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 299px) {
+    .teacher-card div:nth-child(2) p {
+        font-size: 10px;
+    }
+    .before-one-experience-for-teacher {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .one-experience-for-teacher {
+        width: 95%;
+        margin: auto;
+    }
+}

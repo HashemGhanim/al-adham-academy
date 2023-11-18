@@ -2,9 +2,9 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import './images/mainImageForHomePage-1.png';
 import './images/mainImageForHomePage-2.png';
-import './styles/firstAdInHomePage.css'
+import './styles/testCompHomePage.css'
 
-function FirstAdInHomePage(props) {
+function TestCompHomePage(props) {
     return (
         <div className="first-home-page-logo-and-text-container m-0 p-0">
             <div  className="right-0 z-0 homepage-image">
@@ -27,7 +27,7 @@ function FirstAdInHomePage(props) {
                      className="mt-[15px] subsrcibe-word-and-hello">
                     اشترك لتكن فردا من أفراد عائلتنا المميزة 👋
                 </div>
-                <div className="py-6 flex justify-center subsrcibe-homepage-button">
+                <div className="py-6 flex justify-center ">
                     <span className="bg-[#1B2A3D]  p-2.5 px-12 text-[#1B2A3D] rounded-lg font-medium absolute">
                         اشترك
                         <i className="fa-solid fa-circle-plus px-1.5"></i>
@@ -42,4 +42,4 @@ function FirstAdInHomePage(props) {
     );
 }
 
-export default FirstAdInHomePage;
+export default TestCompHomePage;
