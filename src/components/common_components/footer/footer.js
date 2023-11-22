@@ -7,7 +7,7 @@ function Footer(props) {
             <div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
                 <div className="lg:w-1/3">
                     <a href="/" className="flex justify-center space-x-1 lg:justify-start">
-                        <div className="flex items-center justify-center h-12 rounded-full dark:bg-violet-400">
+                        <div className="flex items-center justify-center h-12 rounded-full">
                             <img src={require('../navbar/mainNavbarLogo.png')} className="w-[110px] h-[85px]"/>
                         </div>
                         <span className="self-center text-xl font-semibold" >Al-Adham Academy</span>
@@ -15,7 +15,7 @@ function Footer(props) {
                 </div>
                 <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
                     <div className="space-y-3">
-                        <h3 className="tracki uppercase dark:text-gray-50">Contact</h3>
+                        <h3 className="tracki uppercase ">Contact</h3>
                         <ul className="space-y-2">
                             <li>
                                 Dier Al-Ghusun, Tulkarm
@@ -32,7 +32,7 @@ function Footer(props) {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="tracki uppercase dark:text-gray-50">Company</h3>
+                        <h3 className="tracki uppercase ">Company</h3>
                         <ul className="space-y-2">
                             <li>
                                 <a rel="noopener noreferrer" href="#">Al-Adham Company provides online classes on the company's private browser, to help students accomplish a lot in a short time</a>
@@ -40,7 +40,7 @@ function Footer(props) {
                         </ul>
                     </div>
                     <div className="space-y-3">
-                        <h3 className="uppercase dark:text-gray-50">Developers</h3>
+                        <h3 className="uppercase">Developers</h3>
                         <ul className="space-y-2">
                             <li>
                                 <a rel="noopener noreferrer" href="https://github.com/AbedollahAbuGozah" target="_blank">Abdallah Abu Gozah</a>

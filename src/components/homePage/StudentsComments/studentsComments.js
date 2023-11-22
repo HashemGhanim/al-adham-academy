@@ -44,7 +44,7 @@ function StudentsComments(props){
             ' by injected humour'} nameOfStudent={'سلمان زرعي'}/>]);
     }
     return(
-        <div className="w-full relative">
+        <div className="w-full relative" id={"comments"}>
             <UpperPartOfComments/>
             <div className="students-comments-home-page-component bg-transparent w-[100%] h-[350px] my-12 mx-auto flex flex-row justify-center items-center" >
                 <div className={'relative w-[85%] flex snap-x snap-mandatory overflow-x-auto pb-8 gap-6 items-center bg-transparent no-scrollbar ' + isLessThanTwoComments }>

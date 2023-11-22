@@ -7,7 +7,7 @@ import SHADOW from "../../../GlobalTools/shadows";
 
 function EmailUs(props) {
     return (
-        <div className="w-full h-fit my-24 ">
+        <div className="w-full h-fit my-24 " id={"contact"}>
             <div>
                 <h1 className={"text-2xl font-bold mt-[60px] box-border w-full text-center"} style={{fontFamily:fonts.LEMONADA}}>تواصل معنا</h1>
                 <h2 className={"font-medium translate-y-1.5 box-border w-full text-center"} style={{color:colors.secondTextColor}}>يمكنك ارسال ايميل للتواصل مع افراد الاكاديمية </h2>

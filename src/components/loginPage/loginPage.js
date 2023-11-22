@@ -47,28 +47,28 @@ function LoginPage(props) {
                             class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg main-login-image-jpg"
                         ></div>
                         <div class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
-                            <h3 class="pt-4 text-2xl text-center font-semibold">Sign in to your account</h3>
+                            <h3 class="pt-4 text-2xl text-center rtl font-semibold">مرحبًا بعودتك 👋</h3>
                             <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={loginFormHandler} method='post'>
                                 <div class="mb-4">
-                                    <label class="block mb-2 text-sm font-bold text-gray-700" for="email">
-                                        Email
+                                    <label class="block mb-2 text-sm font-bold text-gray-700 rtl" for="email">
+                                        البريد الإلكتروني
                                     </label>
                                     <input
-                                        class="w-full px-3 py-2 text-sm email-login leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                        class="w-full px-3 rtl py-2 text-sm email-login leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                                         id="email"
                                         type="email"
-                                        placeholder="Your Email Address"
+                                        placeholder="ادخل البريد الإلكتروني"
                                         value={email}
                                         onChange={handleChangeEmail}
                                     />
                                     {isEmailEmpty ? <p className="text-xs italic text-red-500">Please enter the email.</p> : <></>}
                                 </div>
                                 <div class="mb-4">
-                                    <label class="block mb-2 text-sm font-bold text-gray-700" for="password">
-                                        Password
+                                    <label class="block mb-2 rtl text-sm font-bold text-gray-700" for="password">
+                                        كلمة السر
                                     </label>
                                     <input
-                                        class="w-full password-login px-3 py-2 text-sm leading-tight text-gray-700 border  rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+                                        class="w-full rtl password-login px-3 py-2 text-sm leading-tight text-gray-700 border  rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                                         id="password"
                                         type="password"
                                         placeholder="******************"
@@ -77,10 +77,10 @@ function LoginPage(props) {
                                     />
                                     {isPasswordEmpty ? <p className="text-xs italic text-red-500">Please enter the password.</p> : <></>}
                                 </div>
-                                <div class="mb-4">
-                                    <input class="mr-2 leading-tight" type="checkbox" id="checkbox_id" />
-                                    <label class="text-sm" for="checkbox_id">
-                                        Remember Me
+                                <div class="mb-4 rtl">
+                                    <input class="ml-2 leading-tight rtl" type="checkbox" id="checkbox_id" />
+                                    <label class="text-sm rtl" for="checkbox_id">
+                                        تَذكّرني
                                     </label>
                                 </div>
                                 <div class="mb-6 text-center">
@@ -88,21 +88,21 @@ function LoginPage(props) {
                                         class="w-full bg-[#0b5471] px-4 py-2 font-bold text-white rounded-full hover:bg-[#0c5e7e] focus:outline-none focus:shadow-outline"
                                         type="submit"
                                     >
-                                        Sign In
+                                        تسجيل الدخول
                                     </button>
                                 </div>
                                 <hr class="mb-6 border-t" />
                                 <div class="text-center">
-                                    <Link to={"/signup"} className={"inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"}>
-                                        Create an Account!
+                                    <Link to={"/signup"} className={"inline-block rtl text-sm text-blue-500 align-baseline hover:text-blue-800"}>
+                                        إنشاء حساب!
                                     </Link>
                                 </div>
                                 <div class="text-center">
                                     <Link
                                         to={"/forgot-password"}
-                                        class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
+                                        class="inline-block rtl text-sm text-blue-500 align-baseline hover:text-blue-800"
                                     >
-                                        Forgot Password?
+                                        هل نسيت كلمة السر ؟
                                     </Link>
                                 </div>
                             </form>

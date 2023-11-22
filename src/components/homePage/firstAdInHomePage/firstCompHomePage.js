@@ -6,7 +6,7 @@ import colors from "../../../GlobalTools/colors";
 
 function FirstCompHomePage(props) {
     return (
-            <div className="h-[830px] bg-[#fdf8ee] w-full flex justify-center relative items-center first-component-home-page-ad">
+            <div id="home" className="h-[830px] bg-[#fdf8ee] w-full flex justify-center relative items-center first-component-home-page-ad">
                 <img src={require('./images/effectOfMainFirstComp.png')} className="object-cover absolute"/>
                 <img src={require('./images/mainLogoForFirstComp.png')}/>
                 <img src={require('./images/circleForMainFirstComp.png')} className="absolute w-1/6 object-cover right-[7%] top-[18%] z-10"/>

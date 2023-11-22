@@ -106,7 +106,7 @@ const teacherCaredDetails = ()=> {
 function TeacherComponent(props) {
 
     return (
-        <div className="w-full box-border">
+        <div className="w-full box-border" id={"information"}>
             {upperPartOfComponentTeacher()}
             {teacherInfo(teacherCard() , teacherCaredDetails())}
         </div>

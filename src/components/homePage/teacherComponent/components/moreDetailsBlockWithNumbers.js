@@ -35,7 +35,7 @@ function MoreDetailsBlockWithNumbers(props) {
         if(!isVisible || count === constNumber){
             return ()=>clearTimeout(timer);
         }
-        timer = setTimeout(()=>incrementCount() , 15);
+        timer = setTimeout(()=>incrementCount() , 13);
         return ()=> clearTimeout(timer);
     } , [count , isVisible])
 
