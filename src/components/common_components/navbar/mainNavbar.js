@@ -16,39 +16,45 @@ const loginButton = ()=>{
         </Link>
     );
 };
-
-function MainNavbar(props) {
-    const [authenticated , setAuthenticated] = useState(false);
-
-    const mainLinks = ()=>{
-        return (
-            [
-                <span style={{padding:'8px'}} className="font-medium mx-3">
+const mainLinks = ()=>{
+    return (
+        [
+            <span style={{padding:'8px'}} className="font-medium mx-3">
                         <i className="fa-solid fa-house px-1" ></i>
                     <a href={"/#home"}>
                         الرئيسية
                     </a>
                 </span>,
-                <span style={{padding:'8px'}} className="font-medium mx-3">
+            <span style={{padding:'8px'}} className="font-medium mx-3">
                         <i className="fa-solid fa-circle-info px-1"></i>
                     <a href={"/#information"}>
                         معلومات عنا
                     </a>
                 </span>,
-                <span style={{padding:'8px'}} className="font-medium mx-3">
+            <span style={{padding:'8px'}} className="font-medium mx-3">
                         <i className="fa-solid fa-phone fa-rotate-270 px-1"></i>
                     <a href={"/#contact"}>
                         اتصل بنا
                     </a>
                 </span>,
-                <span style={{padding:'8px'}} className="font-medium mx-3">
+            <span style={{padding:'8px'}} className="font-medium mx-3">
                         <i className="fa-solid fa-ranking-star px-1"></i>
                     <a href={"/#comments"}>
                         اراء الطلبة السابقين
                     </a>
                 </span>
-            ]
-        );
+        ]
+    );
+}
+
+function MainNavbar(props) {
+    const [authenticated , setAuthenticated] = useState(true);
+
+    const userImageHandler = ()=>{
+        document.getElementById("user-own-navbar").classList.remove("display-none");
+        document.getElementById("user-own-navbar-white").classList.remove("toLeftAnimation");
+        document.getElementById("user-own-navbar-white").classList.add("toRightAnimation");
+        document.getElementsByTagName("body")[0].style.overflow='hidden';
     }
 
     return (
@@ -74,10 +80,10 @@ function MainNavbar(props) {
             </div>
 
             <div style={{color:colors.whiteColor}} className="my-auto flex justify-center">
-                {
-                    <div className="w-11 h-11 rounded-full mx-3 ml-8 hover:outline hover:outline-offset-2 hover:outline-[3px] hover:outline-[#4791e0] cursor-pointer transition transition-all duration-200">
+                {authenticated ?
+                    <div onClick={userImageHandler} className="w-11 h-11 rounded-full mx-3 ml-8 hover:outline hover:outline-offset-2 hover:outline-[3px] hover:outline-[#4791e0] cursor-pointer transition transition-all duration-200">
                         <img src={require('../../../GlobalTools/avatarLogo/9439775.jpg')} className="object-cover rounded-full"/>
-                    </div>
+                    </div> : loginButton()
                 }
                 <div className="py-2.5 flex-row-reverse text-black" style={{direction:'rtl'}} id="nav-bar-main-items">
                     {

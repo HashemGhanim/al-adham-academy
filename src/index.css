@@ -4,18 +4,21 @@
 
 @layer utilities {
   @variants responsive {
-    /* Hide scrollbar for Chrome, Safari and Opera */
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
     .no-scrollbar {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
     }
   }
   @variants textdirection {
+    .display-none {
+      display: none;
+    }
+    .display-block {
+      display: block;
+    }
     .rtl {
       direction: rtl;
     }
@@ -24,12 +27,34 @@
     }
   }
 
-  @variants responsiveSignUp {
-    .rtl {
-      direction: rtl;
+  @variants animate {
+    .toLeftAnimation {
+      animation-name: toLeftAnimationFrame ;
+      animation-delay: 0ms ;
+      animation-duration: 500ms ;
+      animation-fill-mode: both;
     }
-    .ltr {
-      direction: ltr;
+    @keyframes toLeftAnimationFrame {
+      from{
+        transform: translateX(0px);
+      }
+      to{
+        transform: translateX(-280px);
+      }
+    }
+    .toRightAnimation {
+      animation-name: toRightAnimationFrame ;
+      animation-delay: 0ms ;
+      animation-duration: 500ms ;
+      animation-fill-mode: both;
+    }
+    @keyframes toRightAnimationFrame {
+      from{
+        transform: translateX(-280px);
+      }
+      to{
+        transform: translateX(0px);
+      }
     }
   }
 }
