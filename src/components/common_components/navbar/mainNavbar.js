@@ -20,7 +20,7 @@ const mainLinks = ()=>{
     return (
         [
             <span style={{padding:'8px'}} className="font-medium mx-3">
-                        <i className="fa-solid fa-house px-1" ></i>
+                    <i className="fa-solid fa-house px-1" ></i>
                     <a href={"/#home"}>
                         الرئيسية
                     </a>
@@ -46,17 +46,22 @@ const mainLinks = ()=>{
         ]
     );
 }
+const userImageHandler = ()=>{
+    const userOwnNavbarWhite = document.getElementById("user-own-navbar-white");
+    const userOwnNavbar = document.getElementById("user-own-navbar");
+
+    if(userOwnNavbar != null)
+        userOwnNavbar.classList.remove("display-none");
+    if(userOwnNavbarWhite != null){
+        userOwnNavbarWhite.classList.remove("toLeftAnimation");
+        userOwnNavbarWhite.classList.add("toRightAnimation");
+    }
+    document.getElementsByTagName("body")[0].style.overflow='hidden';
+}
+
 
 function MainNavbar(props) {
     const [authenticated , setAuthenticated] = useState(true);
-
-    const userImageHandler = ()=>{
-        document.getElementById("user-own-navbar").classList.remove("display-none");
-        document.getElementById("user-own-navbar-white").classList.remove("toLeftAnimation");
-        document.getElementById("user-own-navbar-white").classList.add("toRightAnimation");
-        document.getElementsByTagName("body")[0].style.overflow='hidden';
-    }
-
     return (
         <nav className="flex justify-between my-0 h-[70px] relative"  id="nav-bar-main" style={{background:colors.mainColor}}>
             <div className="flex flex-grow-0 order-2 items-center" id="nav-bar-main-logo">

@@ -3,7 +3,19 @@
 @tailwind utilities;
 
 @layer utilities {
+
+
   @variants responsive {
+    .card-transaction:first-child {
+      /*box-shadow: 0px 4px 38px rgba(100, 24, 195, 0.22);*/
+    }
+    .poppins-font {
+      font-family: 'Poppins', sans-serif;
+    }
+    .profile-font-color {
+      --tw-text-opacity: 1;
+      color: rgba(107,114,128,var(--tw-text-opacity));
+    }
     .no-scrollbar::-webkit-scrollbar {
       display: none;
     }
