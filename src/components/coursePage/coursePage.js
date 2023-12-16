@@ -34,7 +34,7 @@ function CoursePage(props) {
             })
             .catch((error) => {
                 console.error(error);
-                swal("Oops!", "Something went wrong!", "error");
+                swal("!..للأسف", " ..هناك خطأ ما، سيتم اشعاركم في اقرب وقت", "error");
             });
     }
     async function startMeeting(signature) {
@@ -93,7 +93,7 @@ function CoursePage(props) {
                 flexWrap: "wrap",
             }}
         >
-            <button onClick={getSignature} className="py-[10px] px-[40px] mt-[20px] text-white border-0 rounded-[10px] inline-block outline-0 cursor-pointer" style={{backgroundColor:colors.secondColor}}>Join Meeting</button>
+            <button onClick={getSignature} className="py-[10px] px-[40px] mt-[20px] text-white border-0 rounded-[10px] inline-block outline-0 cursor-pointer" style={{backgroundColor:colors.secondColor}}>انضم للمحاضرة</button>
             {/* For Component View */}
             <div
                 id="meetingSDKElement"
