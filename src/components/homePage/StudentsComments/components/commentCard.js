@@ -6,7 +6,7 @@ import '../styles/studentsCommentsHomePageCard.css';
 
 function CommentCard(props) {
     return(
-            <div className={'students-comments-home-page-card w-[28%] h-[246px] box-border snap-start shrink-0 scroll-mx-6 snap-normal ' + shadows} style={{backgroundColor:colors.whiteColor}}>
+            <div className={'students-comments-home-page-card w-[28%] rounded-lg h-[246px] box-border snap-start shrink-0 scroll-mx-6 snap-normal ' + shadows} style={{backgroundColor:colors.whiteColor}}>
                 <div className=" w-full h-[70%]">
                     <p className="text-[18px] p-[32px]" style={{color:colors.grayText , lineHeight:'156.5%' , letterSpacing:'2%' , direction:'rtl'}}>
                         {'“'}

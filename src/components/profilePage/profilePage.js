@@ -4,7 +4,7 @@ import colors from "../../GlobalTools/colors";
 
 function ProfilePage(props) {
     return (
-        <div className="w-full h-[120vh] rtl box-border overflow-y-scroll px-4 pt-6">
+        <div className="w-full h-fit rtl box-border overflow-y-scroll px-4 pt-6">
             <div className="mb-4 path">
                 <span>
                     <i className="fa-solid fa-house px-3" ></i>
@@ -97,31 +97,31 @@ function ProfilePage(props) {
                         </h3>
                         <div className="">
                             <div className="flex justify-between mb-2 mt-4">
-                                <span className="text-base font-medium text-blue-700 dark:text-white">الأمتحان الأخير</span>
-                                <span className="text-sm font-medium text-blue-700 dark:text-white">9/10</span>
+                                <span className="text-base font-medium text-blue-700">الأمتحان الأخير</span>
+                                <span className="text-sm font-medium text-blue-700 ">9/10</span>
                             </div>
-                            <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div className="w-full bg-gray-200 rounded-full h-2.5 ">
                                 <div className="bg-blue-600 h-2.5 rounded-full" style={{width:'90%'}}></div>
                             </div>
                             <div className="flex justify-between mb-2 mt-8">
-                                <span className="text-base font-medium text-blue-700 dark:text-white">معدل الأمتحانات</span>
-                                <span className="text-sm font-medium text-blue-700 dark:text-white">8.2/10</span>
+                                <span className="text-base font-medium text-blue-700 ">معدل الأمتحانات</span>
+                                <span className="text-sm font-medium text-blue-700 ">8.2/10</span>
                             </div>
-                            <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div className="w-full bg-gray-200 rounded-full h-2.5 ">
                                 <div className="bg-blue-600 h-2.5 rounded-full" style={{width:'82%'}}></div>
                             </div>
                             <div className="flex justify-between mb-2 mt-8">
-                                <span className="text-base font-medium text-blue-700 dark:text-white">المشاركة</span>
-                                <span className="text-sm font-medium text-blue-700 dark:text-white">9.3/10</span>
+                                <span className="text-base font-medium text-blue-700 ">المشاركة</span>
+                                <span className="text-sm font-medium text-blue-700 ">9.3/10</span>
                             </div>
-                            <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div className="w-full bg-gray-200 rounded-full h-2.5 ">
                                 <div className="bg-blue-600 h-2.5 rounded-full" style={{width:'93%'}}></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="xl:col-span-2 col-span-full rounded-lg grid grid-cols-2 gap-4 box-border">
-                    <div className="bg-white rounded-lg col-span-full max-h-[425.81px] sm:col-span-1 shadow xl:p-8 sm:p-6 p-4">
+                    <div className="bg-white rounded-lg col-span-full max-h-[425.81px] sm:col-span-1 shadow xl:p-8 sm:p-6 p-4 relative">
                         <h3 className="font-bold text-xl ">
                             محفظتي
                         </h3>
@@ -137,6 +137,9 @@ function ProfilePage(props) {
                                 <h1 className="absolute top-20 left-5 ltr text-4xl font-semibold poppins-font text-white max-[390px]:text-3xl">
                                     ₪ 150.00
                                 </h1>
+                                <div className="absolute top-0 -left-6">
+                                    <img src={require('./images/waveElements.png')} className="w-[600px]"/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -144,7 +147,7 @@ function ProfilePage(props) {
                         <h3 className="font-bold text-xl">
                                 نشاط المحفظة
                         </h3>
-                        <div className="h-full w-full relative overflow-y-scroll">
+                        <div className="h-full w-full relative overflow-y-scroll no-scrollbar">
                             <div className="border-b pb-3 w-full h-fit relative bg-white box-border mt-3">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none" className="inline-block my-1 mr-1">
                                     <rect x="2.00027" y="1.99998" width="59" height="59" rx="12" stroke="#EBEBEB" stroke-width="4"/>
@@ -176,6 +179,24 @@ function ProfilePage(props) {
                                 </h2>
                                 <h2 className="inline-block text-sm mr-8 ltr">
                                     +₪750
+                                </h2>
+                                <h2 className="inline-block mr-8 ltr text-[#2BC155] poppins-font font-medium">
+                                    عملية مكتملة
+                                </h2>
+                            </div>
+                            <div className="border-b pb-3 w-full h-fit relative bg-white box-border mt-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="63" height="63" viewBox="0 0 63 63" fill="none" className="inline-block my-1 mr-1">
+                                    <rect x="2.00027" y="1.99998" width="59" height="59" rx="12" stroke="#EBEBEB" stroke-width="4"/>
+                                    <path d="M37.2694 38.9907L37.2694 38.9907L32.3964 43.8874C32.3937 43.8901 32.3912 43.8927 32.3888 43.8949M37.2694 38.9907L32.0391 43.5375L32.3921 43.8917C32.3828 43.9009 32.3751 43.9078 32.3719 43.9107L32.3708 43.9117C32.3732 43.9095 32.3799 43.9036 32.388 43.8957C32.3883 43.8954 32.3885 43.8952 32.3888 43.8949M37.2694 38.9907C37.8294 38.428 37.8273 37.5179 37.2646 36.9578C36.7018 36.3977 35.7917 36.3999 35.2316 36.9626L35.2316 36.9626L32.813 39.393M37.2694 38.9907L32.813 39.393M32.3888 43.8949C31.8295 44.4509 30.9229 44.4526 30.3618 43.8945C30.3606 43.8934 30.3593 43.8921 30.3581 43.8909L30.3566 43.8894L30.3445 43.8772L25.4816 38.9908L25.836 38.6381L25.4816 38.9908C24.9217 38.4282 24.9236 37.518 25.4865 36.9578C26.0492 36.3978 26.9594 36.3999 27.5194 36.9626L27.5194 36.9627L29.938 39.393L29.938 20.75C29.938 19.956 30.5816 19.3125 31.3755 19.3125C32.1694 19.3125 32.813 19.956 32.813 20.75L32.813 39.393M32.3888 43.8949C32.3902 43.8935 32.3917 43.8921 32.3931 43.8907L32.813 39.393M30.358 43.8908C30.3576 43.8903 30.3571 43.8898 30.3566 43.8894L30.358 43.8908Z" fill="#61C277" stroke="#61C277"/>
+                                </svg>
+                                <h2 className="inline-block font-bold mr-8">
+                                    سحب
+                                </h2>
+                                <h2 className="inline-block text-sm mr-8 ltr">
+                                    06:24:45 AM
+                                </h2>
+                                <h2 className="inline-block text-sm mr-8 ltr">
+                                    -₪500
                                 </h2>
                                 <h2 className="inline-block mr-8 ltr text-[#2BC155] poppins-font font-medium">
                                     عملية مكتملة

@@ -24,6 +24,14 @@ function StudentsComments(props){
         <CommentCard commentOfStudent={'There are many variations of passages\n' +
             ' of Lorem Ipsum available, but the majority\n' +
             ' have suffered alteration in some form,\n' +
+            ' by injected humour'} nameOfStudent={'سلمان زرعي'}/>,
+        <CommentCard commentOfStudent={'There are many variations of passages\n' +
+            ' of Lorem Ipsum available, but the majority\n' +
+            ' have suffered alteration in some form,\n' +
+            ' by injected humour'} nameOfStudent={'سلمان زرعي'}/>,
+        <CommentCard commentOfStudent={'There are many variations of passages\n' +
+            ' of Lorem Ipsum available, but the majority\n' +
+            ' have suffered alteration in some form,\n' +
             ' by injected humour'} nameOfStudent={'سلمان زرعي'}/>
     ]);
 
@@ -44,10 +52,10 @@ function StudentsComments(props){
             ' by injected humour'} nameOfStudent={'سلمان زرعي'}/>]);
     }
     return(
-        <div className="w-full relative" id={"comments"}>
+        <div className="w-full relative mt-16" id={"comments"}>
             <UpperPartOfComments/>
             <div className="students-comments-home-page-component bg-transparent w-[100%] h-[350px] my-12 mx-auto flex flex-row justify-center items-center" >
-                <div className={'relative w-[85%] flex snap-x snap-mandatory overflow-x-auto pb-8 gap-6 items-center bg-transparent no-scrollbar ' + isLessThanTwoComments }>
+                <div className={'relative w-[85%] flex snap-x snap-mandatory overflow-x-auto pb-8 gap-6 items-center bg-transparent  ' + isLessThanTwoComments }>
                     {listOfComments}
                 </div>
             </div>

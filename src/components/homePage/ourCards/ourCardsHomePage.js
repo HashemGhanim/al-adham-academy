@@ -4,7 +4,7 @@ import SecondComponent from "./components/secondComponent";
 
 function OurCardsHomePage(props) {
     return (
-        <div className="cards-component-home-page">
+        <div className="cards-component-home-page mt-12">
             <TopComponent/>
             <SecondComponent/>
         </div>

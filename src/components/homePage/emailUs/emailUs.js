@@ -7,7 +7,7 @@ import SHADOW from "../../../GlobalTools/shadows";
 
 function EmailUs(props) {
     return (
-        <div className="w-full h-fit my-24 " id={"contact"}>
+        <div className="w-full h-fit my-32 rtl" id={"contact"}>
             <div>
                 <h1 className={"text-2xl font-bold mt-[60px] box-border w-full text-center"} style={{fontFamily:fonts.LEMONADA}}>تواصل معنا</h1>
                 <h2 className={"font-medium translate-y-1.5 box-border w-full text-center"} style={{color:colors.secondTextColor}}>يمكنك ارسال ايميل للتواصل مع افراد الاكاديمية </h2>
@@ -21,13 +21,13 @@ function EmailUs(props) {
                                     htmlFor="name"
                                     className="mb-3 block text-base font-medium text-[#F5F5F5]"
                                 >
-                                    Full Name
+                                    الأسم الكامل
                                 </label>
                                 <input
                                     type="text"
                                     name="name"
                                     id="name"
-                                    placeholder="Full Name"
+                                    placeholder="الأسم الكامل"
                                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                                 />
                             </div>
@@ -36,7 +36,7 @@ function EmailUs(props) {
                                     htmlFor="email"
                                     className="mb-3 block text-base font-medium text-[#F5F5F5]"
                                 >
-                                    Email Address
+                                    البريد الألكتروني
                                 </label>
                                 <input
                                     type="email"
@@ -51,13 +51,13 @@ function EmailUs(props) {
                                     htmlFor="subject"
                                     className="mb-3 block text-base font-medium text-[#F5F5F5]"
                                 >
-                                    Subject
+                                    الموضوع
                                 </label>
                                 <input
                                     type="text"
                                     name="subject"
                                     id="subject"
-                                    placeholder="Enter your subject"
+                                    placeholder="أدخل موضوعك"
                                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                                 />
                             </div>
@@ -66,23 +66,23 @@ function EmailUs(props) {
                                     htmlFor="message"
                                     className="mb-3 block text-base font-medium text-[#F5F5F5]"
                                 >
-                                    Message
+                                    الرسالة
                                 </label>
                                 <textarea
                                     rows="4"
                                     name="message"
                                     id="message"
-                                    placeholder="Type your message"
+                                    placeholder="أكتب رسالتك"
                                     className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                                 ></textarea>
                             </div>
                             <div>
                                 <button
-                                    className="hover:shadow-form rounded-md py-3 px-8 text-base font-semibold text-white outline-none"
+                                    className="hover:scale-95 transition transition-all duration-300 rounded-md py-3 px-8 text-base font-semibold text-white outline-none"
                                     style={{backgroundColor: colors.thirdColorBold}}
                                 >
-                                    Send message
                                     <i className="fa-solid fa-paper-plane translate-x-1.5 rotate-[20deg]"></i>
+                                    أرسل الرسالة
                                 </button>
                             </div>
                         </form>

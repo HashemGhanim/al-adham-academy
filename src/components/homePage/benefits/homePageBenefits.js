@@ -5,7 +5,7 @@ import './homePageBenefits.css'
 
 function HomePageBenefits(props) {
     return (
-        <div className="home-page-benefits mt-[150px]">
+        <div className="home-page-benefits mt-12">
             <RightSide/>
             <LeftSide/>
         </div>

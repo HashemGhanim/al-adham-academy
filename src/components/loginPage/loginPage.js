@@ -39,7 +39,7 @@ function LoginPage(props) {
     }
 
     return (
-        <div className="w-full  h-[100vh] top-0 flex justify-center items-center absolute z-50" style={{backgroundColor:colors.mainColor}}>
+        <div className="w-full  h-[100vh] top-0 flex justify-center items-center  z-50 bg-[#F5F5F5]" >
             <div class="container mx-auto">
                 <div class="flex justify-center px-6 my-12">
                     <div class="w-full xl:w-3/4 lg:w-11/12 flex">

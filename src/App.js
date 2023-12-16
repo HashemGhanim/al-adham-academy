@@ -9,6 +9,8 @@ import ForgotPassword from "./components/forgotPassword/forgotPassword";
 import NotfoundPage from "./components/common_components/notfoundPage/notfoundPage";
 import ProfilePage from "./components/profilePage/profilePage";
 import {useEffect} from "react";
+import Settings from "./components/settingsPage/settings";
+import CoursePage from "./components/coursePage/coursePage";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -18,6 +20,8 @@ const router = createBrowserRouter(
             <Route path="signup" element={<SignupPage/>}/>
             <Route path="forgot-password" element={<ForgotPassword/>}/>
             <Route path="profile" element={<ProfilePage/>}/>
+            <Route path="settings" element={<Settings/>}/>
+            <Route path="course" element={<CoursePage/>}/>
             <Route path="*" element={<NotfoundPage/>}/>
         </Route>
     )
