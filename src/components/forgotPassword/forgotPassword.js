@@ -5,64 +5,38 @@ import './forgotPassword.css';
 
 function ForgotPassword(props) {
     return (
-        <div className="w-full h-[100vh] top-0 flex justify-center items-center absolute z-50" style={{backgroundColor:colors.mainColor}}>
-            <div class="container mx-auto">
-            <div class="flex justify-center px-6 my-12 min-[1023px]:h-[600px]">
-                <div class="w-full xl:w-3/4 lg:w-11/12 flex">
-                    <div
-                        class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg main-forgot-password-image-jpg"
-                    ></div>
-                    <div class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
-                        <div className="w-full h-fit min-[1023px]:my-[90px]">
-                            <div className="px-8 mb-4 text-center">
-                                <h3 className="pt-4 mb-2 text-2xl">نسيت كلمة السر ؟</h3>
-                                <p className="mb-4 rtl text-sm text-gray-700">
-                                    لقد حصلنا على ذلك، هذه أشياء تحدث. فقط أدخل عنوان بريدك الإلكتروني أدناه وسنرسل لك
-                                    رابط لإعادة تعيين كلمة المرور الخاصة بك!
-                                </p>
-                            </div>
-                            <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded" method="post">
-                                <div className="mb-4">
-                                    <label className="block mb-2 rtl text-sm font-bold text-gray-700" htmlFor="email">
-                                        البريد الإلكتروني
-                                    </label>
-                                    <input
-                                        className="w-full rtl px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="email"
-                                        type="email"
-                                        placeholder="ادخل البريد الإلكتروني..."
-                                    />
-                                </div>
-                                <div className="mb-6 text-center">
-                                    <button
-                                        className="w-full px-4 py-2 font-bold text-white bg-[#46a2c9] rounded-full hover:bg-[#3d93b7] focus:outline-none focus:shadow-outline"
-                                        type="submit"
-                                    >
-                                        إعادة تعيين كلمة المرور
-                                    </button>
-                                </div>
-                                <hr className="mb-6 border-t"/>
-                                <div className="text-center">
-                                    <Link
-                                        to={"/signup"}
-                                        className="inline-block rtl text-sm text-blue-500 align-baseline hover:text-blue-800"
-                                    >
-                                        إنشاء حساب!
-                                    </Link>
-                                </div>
-                                <div className="text-center">
-                                    <Link to={"/login"} className="inline-block rtl text-sm text-blue-500 align-baseline hover:text-blue-800">
-                                        هل لديك حساب؟ تسجيل الدخول
-                                    </Link>
-                                </div>
-                            </form>
+        <main className="w-full h-[100vh] pt-8 px-6 flex flex-col justify-center items-center mx-auto">
+            <Link to={"/"} className="lg:mb-10 mb-8 font-semibold text-2xl flex justify-center items-center">
+                <img src={require('./images/mainLogo.png')}
+                     className="h-22  max-w-full self-center justify-self-center" alt={"main logo"}/>
+            </Link>
+            <div
+                className="xl:p-0 sm:max-w-screen-sm lg:flex md:mt-0 shadow bg-white rounded-lg items-center justify-center w-full ">
+                <div className=" lg:p-16 sm:p-8 p-6 w-full">
+                    <h2 className="lg:text-3xl text-[#111827] font-bold text-2xl rtl mb-3">
+                        نسيت كلمة السر ؟
+                    </h2>
+                    <p className="font-normal text-base text-[#6b7280] rtl">
+                        لا تقلق! فقط اكتب بريدك الإلكتروني وسنرسل لك رمزًا لإعادة تعيين كلمة المرور الخاصة بك!
+                    </p>
+                    <form action={'#'} className="mt-8">
+                        <div>
+                            <label htmlFor={"email"} className="text-[#111827] font-medium text-sm block mb-2 rtl">
+                                البريد الالكتروني
+                            </label>
+                            <input type={"email"} name={"email"} id="email" placeholder="name@company.com" required
+                                   className="rtl sm:text-sm text-[#111827] p-2.5 bg-[#f9fafb] border-[#d1d5db] border rounded-lg w-full block "/>
                         </div>
-                    </div>
+                        <button type={"submit"}
+                                className="mt-6 sm:w-auto text-white font-medium text-base text-center py-3 px-5 rounded-lg ml-auto block bg-[#47a3c8] transition transition-all duration-300 hover:scale-95">
+                            إعادة تعيين كلمة المرور
+                        </button>
+                    </form>
                 </div>
             </div>
-        </div>
-        </div>
+        </main>
+
     );
 }
 
-export default memo(ForgotPassword);
+export default ForgotPassword;

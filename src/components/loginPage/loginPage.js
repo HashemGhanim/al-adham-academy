@@ -39,78 +39,56 @@ function LoginPage(props) {
     }
 
     return (
-        <div className="w-full  h-[100vh] top-0 flex justify-center items-center  z-50 bg-[#F5F5F5]" >
-            <div class="container mx-auto">
-                <div class="flex justify-center px-6 my-12">
-                    <div class="w-full xl:w-3/4 lg:w-11/12 flex">
-                        <div
-                            class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg main-login-image-jpg"
-                        ></div>
-                        <div class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none">
-                            <h3 class="pt-4 text-2xl text-center rtl font-semibold">مرحبًا بعودتك 👋</h3>
-                            <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={loginFormHandler} method='post'>
-                                <div class="mb-4">
-                                    <label class="block mb-2 text-sm font-bold text-gray-700 rtl" for="email">
-                                        البريد الإلكتروني
-                                    </label>
-                                    <input
-                                        class="w-full px-3 rtl py-2 text-sm email-login leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="email"
-                                        type="email"
-                                        placeholder="ادخل البريد الإلكتروني"
-                                        value={email}
-                                        onChange={handleChangeEmail}
-                                    />
-                                    {isEmailEmpty ? <p className="text-xs italic text-red-500">Please enter the email.</p> : <></>}
-                                </div>
-                                <div class="mb-4">
-                                    <label class="block mb-2 rtl text-sm font-bold text-gray-700" for="password">
-                                        كلمة السر
-                                    </label>
-                                    <input
-                                        class="w-full rtl password-login px-3 py-2 text-sm leading-tight text-gray-700 border  rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="password"
-                                        type="password"
-                                        placeholder="******************"
-                                        value={password}
-                                        onChange={handleChangePassword}
-                                    />
-                                    {isPasswordEmpty ? <p className="text-xs italic text-red-500">Please enter the password.</p> : <></>}
-                                </div>
-                                <div class="mb-4 rtl">
-                                    <input class="ml-2 leading-tight rtl" type="checkbox" id="checkbox_id" />
-                                    <label class="text-sm rtl" for="checkbox_id">
-                                        تَذكّرني
-                                    </label>
-                                </div>
-                                <div class="mb-6 text-center">
-                                    <button
-                                        class="w-full bg-[#0b5471] px-4 py-2 font-bold text-white rounded-full hover:bg-[#0c5e7e] focus:outline-none focus:shadow-outline"
-                                        type="submit"
-                                    >
-                                        تسجيل الدخول
-                                    </button>
-                                </div>
-                                <hr class="mb-6 border-t" />
-                                <div class="text-center">
-                                    <Link to={"/signup"} className={"inline-block rtl text-sm text-blue-500 align-baseline hover:text-blue-800"}>
-                                        إنشاء حساب!
-                                    </Link>
-                                </div>
-                                <div class="text-center">
-                                    <Link
-                                        to={"/forgot-password"}
-                                        class="inline-block rtl text-sm text-blue-500 align-baseline hover:text-blue-800"
-                                    >
-                                        هل نسيت كلمة السر ؟
-                                    </Link>
-                                </div>
-                            </form>
+        <main className="w-full h-[100vh] pt-8 px-6 flex flex-col justify-center items-center mx-auto">
+            <Link to={"/"} className="lg:mb-10 mb-8 font-semibold text-2xl flex justify-center items-center">
+                <img src={require('./images/mainLogo.png')} className="h-22  max-w-full self-center justify-self-center"/>
+            </Link>
+            <div className="xl:p-0 lg:max-w-screen-lg lg:flex md:mt-0 shadow bg-white rounded-lg items-center justify-center w-full ">
+                <div className="lg:flex w-8/12 hidden h-full">
+                    <img src={require('./images/login-main-image.jpg')} className="rounded-l-lg object-cover"/>
+                </div>
+                <div className=" lg:p-16 sm:p-8 p-6 w-full">
+                    <h2 className="lg:text-3xl text-[#111827] font-bold text-2xl rtl">
+                        تسجيل الدخول
+                    </h2>
+                    <form action={'#'} className="mt-8">
+                        <div>
+                            <label for={"email"} className="text-[#111827] font-medium text-sm block mb-2 rtl">
+                                البريد الالكتروني
+                            </label>
+                            <input type={"email"} name={"email"} id="email" placeholder="name@company.com" required className="rtl sm:text-sm text-[#111827] p-2.5 bg-[#f9fafb] border-[#d1d5db] border rounded-lg w-full block "/>
                         </div>
-                    </div>
+                        <div className="mt-6">
+                            <label htmlFor={"password"} className="text-[#111827] font-medium text-sm block mb-2 rtl">
+                                كلمة المرور
+                            </label>
+                            <input type={"password"} name={"password"} id="password" placeholder="••••••••" required
+                                   className="rtl sm:text-sm text-[#111827] p-2.5 bg-[#f9fafb] border-[#d1d5db] border rounded-lg w-full block "/>
+                        </div>
+                        <div className="flex items-start mt-6 rtl">
+                            <div className="items-center h-5 flex">
+                                <input id="remember" aria-describedby="remember" name="remember" type="checkbox" className="text-[#f9fafb] border-[#d1d5db] rounded w-4 h-4 " required style={{color:colors.secondColor}}/>
+                            </div>
+                            <div className="text-sm mr-3">
+                                <label htmlFor="remember" className="text-[#111827] font-medium">تذكرنى</label>
+                            </div>
+                            <Link to={"/forgot-password"} className="text-[#0694a2] text-sm mr-auto ">
+                                نسيت كلمة المرور ؟
+                            </Link>
+                        </div>
+                        <button type={"submit"} className="mt-6 sm:w-auto text-white font-medium text-base text-center py-3 px-5 rounded-lg ml-auto block bg-[#075471] transition transition-all duration-300 hover:scale-95">
+                            تسجيل دخول
+                        </button>
+                        <div className="pt-6 text-[#6b7280] font-medium text-sm rtl">
+                            غير مسجل؟
+                            <Link to={"/signup"} className="text-[#0694a2]">
+                                إنشاء حساب
+                            </Link>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
+        </main>
     );
 }
 

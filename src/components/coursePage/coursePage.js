@@ -1,16 +1,23 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ZoomMtgEmbedded from "@zoomus/websdk/embedded";
 import swal from "sweetalert";
 import colors from "../../GlobalTools/colors";
 import uuid from "react-uuid";
+import {useLocation, useParams} from "react-router-dom";
+import PathOfPage from "../common_components/page_path/pathOfPage";
 
 function CoursePage(props) {
+    const { meetingId } = useParams();
+    const location = useLocation();
+    const { meetingPassword , lessonName} = location.state || {};
+
     const client = ZoomMtgEmbedded.createClient();
+
 
     var authEndpoint = 'http://localhost:4000';
     var sdkKey = 'r6GILtlSMOT4JZiP2bYw';
-    var meetingNumber = '81290895599';
-    var passWord = 'k47DGs';
+    var meetingNumber = meetingId;
+    var passWord = meetingPassword;
     var role = 0;
     var userName = uuid();
     var userEmail = '';
@@ -81,36 +88,43 @@ function CoursePage(props) {
                 console.log(error);
             });
     }
+
+
     return (
-        <main
-            className="mx-auto text-center h-fit"
-            style={{
-                height: "",
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexWrap: "wrap",
-            }}
-        >
-            <button onClick={getSignature} className="py-[10px] px-[40px] mt-[20px] text-white border-0 rounded-[10px] inline-block outline-0 cursor-pointer" style={{backgroundColor:colors.secondColor}}>انضم للمحاضرة</button>
-            {/* For Component View */}
-            <div
-                id="meetingSDKElement"
+        <>
+            <div className="px-4 pt-6 rtl border-b flex justify-between items-end">
+                <PathOfPage names={['المحاضرات',lessonName]} mainName={lessonName}/>
+                <button onClick={getSignature} className="py-[10px] px-[40px] mt-[20px] mb-4 text-white border-0 max-w-[180px] max-h-[44px] rounded-[10px] inline-block outline-0 cursor-pointer" style={{backgroundColor:colors.secondColor}}>انضم للمحاضرة</button>
+            </div>
+            <main
+                className="mx-auto text-center h-fit"
                 style={{
+                    height: "",
+                    width: "100%",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
                     flexWrap: "wrap",
-                    maxHeight: "100vh",
-                    minHeight: "100vh",
-                    width: "100%",
                 }}
             >
-                {/* Zoom Meeting SDK Component View Rendered Here */}
-            </div>
+                {/* For Component View */}
+                <div
+                    id="meetingSDKElement"
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        flexWrap: "wrap",
+                        maxHeight: "100vh",
+                        minHeight: "100vh",
+                        width: "100%",
+                    }}
+                >
+                    {/* Zoom Meeting SDK Component View Rendered Here */}
+                </div>
 
-        </main>
+            </main>
+        </>
     );
 }
 

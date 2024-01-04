@@ -8,7 +8,8 @@ const colors = {
     grayColor:'#e2e0e0',
     grayText:'#ACACAC',
     secondTextColor :'#8A8A8A',
-    thirdTextColor:'#868686'
+    thirdTextColor:'#868686',
+    primaryBootstrap:'#0d6efd'
 }
 
 export default colors;

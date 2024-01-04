@@ -1,12 +1,5 @@
 import React from 'react';
-
-const rateCrossClicked = ()=>{
-    const userOwnRateBlack = document.getElementById("user-own-rate");
-
-    if(userOwnRateBlack != null)
-        userOwnRateBlack.classList.add("display-none");
-    document.getElementsByTagName("body")[0].style.overflow='visible';
-}
+import {rateCrossClicked} from "../../../GlobalTools/common";
 
 function InputRate(props) {
 

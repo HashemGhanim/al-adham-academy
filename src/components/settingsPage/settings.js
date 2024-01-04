@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {Link} from "react-router-dom";
 import colors from "../../GlobalTools/colors";
+import PathOfPage from "../common_components/page_path/pathOfPage";
 
 
 function Settings(props) {
@@ -14,28 +15,7 @@ function Settings(props) {
 
     return (
         <div className="w-full h-fit rtl box-border overflow-y-scroll px-4 pt-6">
-            <div className="mb-4 path">
-                <span>
-                    <i className="fa-solid fa-house px-3" ></i>
-                    <Link to={"/"}>
-                        الرئيسية
-                    </Link>
-                </span>
-                <span className="mx-1">
-                    <svg className="w-6 h-6 rotate-180 inline" fill="currentColor"
-                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" >
-                    <path fill-rule="evenodd"
-                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-                          clip-rule="evenodd"></path>
-                </svg>
-                </span>
-                <span>
-                    الأعدادات
-                </span>
-                <div className="mt-5 p-3">
-                    <h1 className="font-semibold sm:text-2xl text-xl">اعدادات المستخدم</h1>
-                </div>
-            </div>
+                <PathOfPage names={['الأعدادات']} mainName={'اعدادات المستخدم'}/>
             <div className="grid grid-cols-3 gap-4 p-3">
                 <div className="xl:col-auto rounded-lg col-span-full">
                     <div className="bg-white rounded-lg shadow xl:p-8 sm:p-6 p-4 mb-4">

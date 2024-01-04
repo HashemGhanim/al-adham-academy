@@ -11,19 +11,23 @@ import ProfilePage from "./components/profilePage/profilePage";
 import {useEffect} from "react";
 import Settings from "./components/settingsPage/settings";
 import CoursePage from "./components/coursePage/coursePage";
+import Courses from "./components/coursesPage/courses";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={<RootLayout/>} >
-            <Route index element={<HomePage/>}/>
-            <Route path="login" element={<LoginPage/>}/>
-            <Route path="signup" element={<SignupPage/>}/>
-            <Route path="forgot-password" element={<ForgotPassword/>}/>
-            <Route path="profile" element={<ProfilePage/>}/>
-            <Route path="settings" element={<Settings/>}/>
-            <Route path="course" element={<CoursePage/>}/>
-            <Route path="*" element={<NotfoundPage/>}/>
-        </Route>
+        <>
+            <Route path="/" element={<RootLayout/>} >
+                <Route index element={<HomePage/>}/>
+                <Route path="profile" element={<ProfilePage/>}/>
+                <Route path="settings" element={<Settings/>}/>
+                <Route path="courses" element={<Courses/>}/>
+                <Route path="course/:meetingId" element={<CoursePage/>}/>
+                <Route path="*" element={<NotfoundPage/>}/>
+            </Route>
+            <Route path="/login" element={<LoginPage/>}/>
+            <Route path="/signup" element={<SignupPage/>}/>
+            <Route path="/forgot-password" element={<ForgotPassword/>}/>
+        </>
     )
 )
 function App() {

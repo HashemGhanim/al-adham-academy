@@ -6,10 +6,15 @@ import {Link} from "react-router-dom";
 import colors from "../../../GlobalTools/colors";
 import fonts from "../../../GlobalTools/fonts";
 import classNames from "classnames";
+import {userImageHandler} from "../../../GlobalTools/common";
+
+
+
+
 
 const notificationButton = ()=>{
     return (
-        <Menu as="div" className="relative inline-block text-left">
+        <Menu as="div" className="relative inline-block text-left rtl">
             <div>
                 <Menu.Button className="button group/ring w-[30px] h-[30px] relative flex items-center justify-center rounded-full cursor-pointer duration-300 border-none " style={{boxShadow:'2px 2px 10px rgba(0, 0, 0, 0.13)'}}>
                     <svg viewBox="0 0 448 512" className="bell w-[12px] group-hover/ring:bell-ring">
@@ -43,8 +48,8 @@ const notificationButton = ()=>{
                                          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
                                          alt="avatar"/>
                                         <p className="text-gray-600 text-sm mx-2">
-                                            <span className="font-bold" href="#">Sara Salah</span> replied on the <span
-                                            className="font-bold text-blue-500" href="#">Upload Image</span> artical .
+                                            <span className="font-bold" href="#"> سارة صلاح </span> ردت على <span
+                                            className="font-bold text-blue-500" href="#">تحميل الصورة</span> مقالة.
                                             2m
                                         </p>
                                 </a>
@@ -118,8 +123,7 @@ const notificationButton = ()=>{
                                     )}
                                     style={{backgroundColor:colors.secondColor}}
                                 >
-                                    See all
-                                    notifications
+                                    اطلع على جميع الإشعارات
                                 </a>
                             )}
                         </Menu.Item>
@@ -149,9 +153,9 @@ const mainLinks = ()=>{
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M3 8v10a1 1 0 0 0 1 1h4v-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v5h4a1 1 0 0 0 1-1V8M1 10l9-9 9 9"/>
                     </svg>
-                    <a href={"/#home"}>
+                    <Link to={"/"}>
                         الرئيسية
-                    </a>
+                    </Link>
                 </span>,
             <span style={{padding:'8px'}} className="font-medium inline-block  mx-3 relative cursor-pointer hover:-translate-y-0.5 transition-all transition duration-300 ease-in-out">
                         {/*<i className="fa-solid fa-circle-info px-1"></i>*/}
@@ -187,22 +191,6 @@ const mainLinks = ()=>{
         ]
     );
 }
-const userImageHandler = ()=>{
-    const userOwnNavbarWhite = document.getElementById("user-own-navbar-white");
-    const userOwnNavbar = document.getElementById("user-own-navbar");
-
-    if(userOwnNavbar != null)
-        userOwnNavbar.classList.remove("display-none");
-    if(userOwnNavbarWhite != null){
-        userOwnNavbarWhite.classList.remove("toLeftAnimation");
-        userOwnNavbarWhite.classList.add("toRightAnimation");
-    }
-    document.getElementsByTagName("body")[0].style.overflow='hidden';
-}
-
-
-
-
 
 function MainNavbar(props) {
     const [authenticated , setAuthenticated] = useState(true);

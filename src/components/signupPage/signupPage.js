@@ -6,146 +6,93 @@ import './signupPage.css';
 
 function SignupPage(props) {
     return (
-        <div className="w-full  h-[100vh] top-0 flex justify-center items-center absolute  z-50" style={{backgroundColor:colors.mainColor}}>
-        <div class="container mx-auto">
-            <div class="flex justify-center px-6 my-12">
-                <div class="w-full xl:w-3/4 lg:w-11/12 flex">
-                    <div
-                        class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg main-signup-image-jpg"
-                    ></div>
-                    <div class="w-10/12  max-[450px]:w-full mx-auto lg:w-1/2 lg:mx-0 bg-white p-5 rounded-lg lg:rounded-l-none">
-                        <h3 class="pt-4 text-2xl text-center">إنشاء حساب</h3>
-                        <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded" method="post">
-                            <div class="mb-4 mx-4 flex flex-wrap md:flex-nowrap max-[450px]:mx-0 md:justify-between">
-                                <div class="md:mr-2 md:mb-0 order-2 md:order-1 md:w-auto w-full">
-                                    <label class="block mb-2 rtl text-sm font-bold text-gray-700" for="firstName">
-                                        الأسم الأخير
-                                    </label>
-                                    <input
-                                        class="w-full px-3 rtl py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="lastName"
-                                        type="text"
-                                        placeholder="الأسم الأخير"
-                                    />
-                                </div>
-                                <div class="md:ml-2 mb-4 order-1 w-full md:order-2 md:w-auto md:mb-0">
-                                    <label class="block mb-2 rtl text-sm font-bold text-gray-700" for="lastName">
-                                        الأسم الأول
-                                    </label>
-                                    <input
-                                        class="w-full rtl px-3 py-2 rtl  text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="firstName"
-                                        type="text"
-                                        placeholder="الأسم الأول"
-                                    />
-                                </div>
-                            </div>
-                            <div class="mb-4 mx-4 max-[450px]:mx-0">
-                                <label class="block rtl mb-2 text-sm font-bold text-gray-700" for="email">
-                                    البريد الألكتروني
+        <main className="w-full h-[100vh] py-4 px-6 flex flex-col justify-center items-center mx-auto">
+            <div
+                className="xl:p-0 lg:max-w-screen-lg lg:flex md:mt-0 shadow bg-white rounded-lg items-center justify-center w-full ">
+                <div className="lg:flex w-8/12 hidden h-full">
+                    <img src={require('./images/signup-main-image.jpg')} className="rounded-l-lg object-cover object-center"/>
+                </div>
+                <div className="lg:p-10 sm:p-8 p-6 w-full">
+                    <h2 className="lg:text-3xl text-[#111827] font-bold text-2xl rtl">
+                        انشاء حساب
+                    </h2>
+                    <form action={'#'} className="mt-8">
+                        <div className="sm:flex flex-row-reverse sm:gap-2">
+                            <div className="sm:w-1/2">
+                                <label htmlFor={"first-name"} className="text-[#111827] font-medium text-sm block mb-2 rtl">
+                                    الاسم الاول
                                 </label>
-                                <input
-                                    class="w-full px-3 rtl py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                    id="email"
-                                    type="email"
-                                    placeholder="البريد الألكتروني"
-                                />
+                                <input type={"text"} name={"first-name"} id="first-name"  required placeholder="الاسم الاول"
+                                       className="rtl sm:text-sm text-[#111827] p-2.5 bg-[#f9fafb] border-[#d1d5db] border rounded-lg w-full block "/>
                             </div>
-                            <div class="mb-4 mx-4 flex flex-wrap md:flex-nowrap md:justify-between max-[450px]:mx-0">
-                                <div class="md:mr-2 md:mb-0 md:order-1 order-2 w-full md:w-auto">
-                                    <label class="block rtl mb-2 text-sm font-bold text-gray-700" for="password">
-                                        تأكيد كلمة السر
-                                    </label>
-                                    <input
-                                        required
-                                        class="w-full rtl px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="c_password"
-                                        type="password"
-                                        placeholder="******************"
-                                    />
-
-                                </div>
-                                <div class="md:ml-2 md:w-auto w-full order-1 md:order-2 mb-4 md:mb-0">
-                                    <label class="block mb-2 rtl text-sm font-bold text-gray-700" for="c_password">
-                                        كلمة السر
-                                    </label>
-                                    <input
-                                        class="w-full px-3 py-2 rtl mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="password"
-                                        type="password"
-                                        placeholder="******************"
-                                    />
-                                </div>
+                            <div className="sm:w-1/2 sm:mt-0 mt-6">
+                                <label htmlFor={"last-name"} className="text-[#111827] font-medium text-sm block mb-2 rtl ">
+                                    الاسم الاخير
+                                </label>
+                                <input type={"text"} name={"last-name"} id="last-name"  required placeholder="الاسم الاخير"
+                                       className="rtl sm:text-sm text-[#111827] p-2.5 bg-[#f9fafb] border-[#d1d5db] border rounded-lg w-full block "/>
                             </div>
-                            <div class="mb-6 mx-4 text-center max-[450px]:mx-0">
-                                <button
-                                    class="w-full px-4 py-2 bg-[#0b5471] font-bold text-white rounded-full hover:bg-[#0c5e7e] focus:outline-none focus:shadow-outline"
-                                    type="button"
-                                    type="submit"
-                                >
-                                    تسجيل حساب
-                                </button>
+                        </div>
+                        <div className="mt-6">
+                            <label htmlFor={"email"} className="text-[#111827] font-medium text-sm block mb-2 rtl">
+                                البريد الالكتروني
+                            </label>
+                            <input type={"email"} name={"email"} id="email" placeholder="name@company.com" required
+                                   className="rtl sm:text-sm text-[#111827] p-2.5 bg-[#f9fafb] border-[#d1d5db] border rounded-lg w-full block "/>
+                        </div>
+                        <div className="mt-6">
+                            <label htmlFor={"userId"} className="text-[#111827] font-medium text-sm block mb-2 rtl">
+                                رقم الهوية
+                            </label>
+                            <input type={"number"} name={"userId"} id="userId" placeholder="رقم الهوية" required
+                                   className="rtl sm:text-sm text-[#111827] p-2.5 bg-[#f9fafb] border-[#d1d5db] border rounded-lg w-full block "/>
+                        </div>
+                        <div className="mt-6">
+                            <label htmlFor={"password"} className="text-[#111827] font-medium text-sm block mb-2 rtl">
+                                كلمة المرور
+                            </label>
+                            <input type={"password"} name={"password"} id="password" placeholder="••••••••" required
+                                   className="rtl sm:text-sm text-[#111827] p-2.5 bg-[#f9fafb] border-[#d1d5db] border rounded-lg w-full block "/>
+                        </div>
+                        <div className="mt-6">
+                            <label htmlFor={"confirm-password"} className="text-[#111827] font-medium text-sm block mb-2 rtl">
+                                اعادة كلمة المرور
+                            </label>
+                            <input type={"password"} name={"confirm-password"} id="confirm-password" placeholder="••••••••" required
+                                   className="rtl sm:text-sm text-[#111827] p-2.5 bg-[#f9fafb] border-[#d1d5db] border rounded-lg w-full block "/>
+                        </div>
+                        <div className="flex items-start mt-6 rtl">
+                            <div className="text-sm ml-3">
+                                <label htmlFor="gender-form" className="text-[#111827] font-medium">الجنس : </label>
                             </div>
-                            <hr class="mb-6 border-t" />
-                            <div class="text-center">
-                                <Link
-                                    to={"/forgot-password"}
-                                    class="inline-block text-sm rtl text-blue-500 align-baseline hover:text-blue-800"
-                                >
-                                    هل نسيت كلمة السر ؟
-                                </Link>
+                            <div className="items-center h-5 flex">
+                                <input id="gender-male" value={"male"} aria-describedby="gender" name="gender" type="radio" className="text-[#f9fafb] border-[#d1d5db] rounded w-4 h-4 " required style={{color:colors.secondColor}}/>
                             </div>
-                            <div class="text-center">
-                                <Link to={"/login"} className="inline-block rtl text-sm text-blue-500 align-baseline hover:text-blue-800">
-                                    هل لديك حساب؟ تسجيل الدخول
-                                </Link>
+                            <div className="text-sm mr-3">
+                                <label htmlFor="remember" className="text-[#111827] font-medium">ذكر</label>
                             </div>
-                        </form>
-                    </div>
+                            <div className="items-center h-5 flex mr-3">
+                                <input id="gender-female" value={"female"} aria-describedby="gender" name="gender" type="radio" className="text-[#f9fafb] border-[#d1d5db] rounded w-4 h-4 " required style={{color:colors.secondColor}}/>
+                            </div>
+                            <div className="text-sm mr-3">
+                                <label htmlFor="remember" className="text-[#111827] font-medium">انثى</label>
+                            </div>
+                        </div>
+                        <button type={"submit"}
+                                className="mt-6 sm:w-auto text-white font-medium text-base text-center py-3 px-5 rounded-lg ml-auto block bg-[#47a3c8] transition transition-all duration-300 hover:scale-95">
+                            انشاء حساب
+                        </button>
+                        <div className="pt-6 text-[#6b7280] font-medium text-sm rtl">
+                            هل لديك حساب ؟
+                            <Link to={"/login"} className="text-[#0694a2]">
+                                تسجيل الدخول هنا
+                            </Link>
+                        </div>
+                    </form>
                 </div>
             </div>
-        </div>
-        </div>
+        </main>
     );
 }
 
 export default memo(SignupPage);
-
-/*
-                 <div className="mb-4 mx-4 max-[450px]:mx-0">
-                                <label className="block rtl mb-2 text-sm font-bold text-gray-700" for="studentId">
-                                    رقم الهوية
-                                </label>
-                                <input
-                                    className="w-full px-3 rtl py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                    id="studentId"
-                                    type="text"
-                                    placeholder="رقم الهوية"
-                                />
-                            </div>
-                            <div className="mb-4 mx-4 md:flex max-[450px]:mx-0 md:justify-between">
-                                <div className="mb-4 md:mr-2 md:mb-0">
-                                    <label htmlFor="gender" className="block mb-2 rtl text-sm font-bold text-gray-700">
-                                        الجنس
-                                    </label>
-                                    <select id="gender"
-                                            className="pl-[4.952rem] pr-3 rtl leading-tight  border rounded shadow text-gray-700 text-sm  focus:outline-none focus:shadow-outline py-[10px] w-full py-2 ">
-                                        <option selected >اختر الجنس</option>
-                                        <option value="male">ذكر</option>
-                                        <option value="female">أنثى</option>
-                                    </select>
-                                </div>
-                                <div className="md:ml-2">
-                                    <label className="block mb-2 rtl text-sm font-bold text-gray-700"
-                                           htmlFor="city">
-                                        المدينة
-                                    </label>
-                                    <input
-                                        className="w-full rtl px-3 py-2rtl  text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="city"
-                                        type="text"
-                                        placeholder="المدينة"
-                                    />
-                                </div>
-                            </div>
- */

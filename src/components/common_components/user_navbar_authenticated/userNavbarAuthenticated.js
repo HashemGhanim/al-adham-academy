@@ -1,31 +1,8 @@
 import React, {useState} from 'react';
 import fonts from "../../../GlobalTools/fonts";
 import {Link} from "react-router-dom";
+import {blackScreenClicked , rateListItemClicked} from './../../../GlobalTools/common';
 
-const blackScreenClicked = ()=>{
-    document.getElementsByTagName("body")[0].style.overflow='visible';
-    const userOwnNavbarWhite = document.getElementById("user-own-navbar-white");
-    if(userOwnNavbarWhite != null){
-        userOwnNavbarWhite.classList.remove("toRightAnimation");
-        userOwnNavbarWhite.classList.add("toLeftAnimation");
-    }
-    setTimeout(()=>{
-        const userOwnNavbar = document.getElementById("user-own-navbar");
-        if(userOwnNavbar != null)
-            userOwnNavbar.classList.add("display-none");
-    } , 450);
-}
-const rateListItemClicked = ()=>{
-    setTimeout(()=>{
-        const userOwnRateBlack = document.getElementById("user-own-rate");
-
-        if(userOwnRateBlack != null)
-            userOwnRateBlack.classList.remove("display-none");
-        document.getElementsByTagName("body")[0].style.overflow='hidden';
-        console.log(document.getElementsByTagName("body")[0].style.overflow);
-    } , 100)
-    setTimeout(blackScreenClicked,101);
-}
 const studentNavbar = ()=>{
     return(
         <>
@@ -63,7 +40,7 @@ const studentNavbar = ()=>{
             </div>
             <div className="w-[95%] border-b">
                 <ul className="p-0 m-0 w-full rtl ">
-                    <Link to={"course"} onClick={blackScreenClicked}>
+                    <Link to={"courses"} onClick={blackScreenClicked}>
                         <li className="py-2 px-3 rounded-lg hover:bg-gray-200 rtl mx-1 mt-3  font-medium text-[15px] block cursor-pointer ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="17" height="20" viewBox="0 0 17 20" fill="none" className="inline pl-1">
                                 <path d="M3 4C3 3.44772 3.44772 3 4 3H12C12.5523 3 13 3.44772 13 4V6C13 6.55228 12.5523 7 12 7H4C3.44772 7 3 6.55228 3 6V4ZM4.5 5.5H11.5V4.5H4.5V5.5ZM0 2.5C0 1.11929 1.11929 0 2.5 0H14C15.3807 0 16.5 1.11929 16.5 2.5V16.75C16.5 17.1642 16.1642 17.5 15.75 17.5H1.5C1.5 18.0523 1.94772 18.5 2.5 18.5H15.75C16.1642 18.5 16.5 18.8358 16.5 19.25C16.5 19.6642 16.1642 20 15.75 20H2.5C1.11929 20 0 18.8807 0 17.5V2.5ZM1.5 16H15V2.5C15 1.94772 14.5523 1.5 14 1.5H2.5C1.94772 1.5 1.5 1.94772 1.5 2.5V16Z" fill="#212121"/>
@@ -116,7 +93,6 @@ const studentNavbar = ()=>{
         </>
     );
 }
-
 
 
 function UserNavbarAuthenticated(props) {
