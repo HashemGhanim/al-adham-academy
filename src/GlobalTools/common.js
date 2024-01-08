@@ -20,8 +20,8 @@ const rateListItemClicked = ()=>{
             userOwnRateBlack.classList.remove("display-none");
         document.getElementsByTagName("body")[0].style.overflow='hidden';
         console.log(document.getElementsByTagName("body")[0].style.overflow);
-    } , 100)
-    setTimeout(blackScreenClicked,101);
+    } , 2)
+    setTimeout(blackScreenClicked,1);
 }
 const userImageHandler = ()=>{
     const userOwnNavbarWhite = document.getElementById("user-own-navbar-white");
@@ -44,9 +44,14 @@ const rateCrossClicked = ()=>{
     document.getElementsByTagName("body")[0].style.overflow='visible';
 }
 
+const makeBodyVisible = ()=>{
+    document.getElementsByTagName("body")[0].style.overflow='visible';
+}
+
 export {
     blackScreenClicked,
     rateListItemClicked,
     userImageHandler,
-    rateCrossClicked
+    rateCrossClicked,
+    makeBodyVisible
 }

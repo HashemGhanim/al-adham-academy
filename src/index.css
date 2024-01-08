@@ -6,6 +6,11 @@
 
 
   @variants responsive {
+    .center-y{
+      margin-top: 25vh;
+      /*top:50%;*/
+      /*transform: translateY(-50%);*/
+    }
     .bell-ring {
       animation: bellRing 0.9s both;
     }

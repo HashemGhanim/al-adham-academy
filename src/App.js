@@ -12,6 +12,8 @@ import {useEffect} from "react";
 import Settings from "./components/settingsPage/settings";
 import CoursePage from "./components/coursePage/coursePage";
 import Courses from "./components/coursesPage/courses";
+import Records from "./components/records/records";
+import RecordPage from "./components/RecordPage/recordPage";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -21,7 +23,9 @@ const router = createBrowserRouter(
                 <Route path="profile" element={<ProfilePage/>}/>
                 <Route path="settings" element={<Settings/>}/>
                 <Route path="courses" element={<Courses/>}/>
-                <Route path="course/:meetingId" element={<CoursePage/>}/>
+                <Route path="courses/:meetingId" element={<CoursePage/>}/>
+                <Route path="records" element={<Records/>}/>
+                <Route path="records/:recordId" element={<RecordPage/>}/>
                 <Route path="*" element={<NotfoundPage/>}/>
             </Route>
             <Route path="/login" element={<LoginPage/>}/>

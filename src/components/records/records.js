@@ -30,7 +30,7 @@ function Courses(props) {
         <>
             <div className="rtl pt-6 box-border w-full min-h-[100vh] bg-[#fff]">
             <div className="px-4">
-                <PathOfPage names={['المحاضرات']} mainName={'المحاضرات'}/>
+                <PathOfPage names={['التسجيلات']} mainName={'التسجيلات'}/>
                 <div className="sm:flex sm:mb-0 items-center mb-3 hidden">
                     <form className="lg:pr-3" action="#" method="GET">
                         <div className="lg:w-64	mt-1 relative">
@@ -76,7 +76,7 @@ function Courses(props) {
                                                 {row.time}
                                             </td>
                                             <td className="p-4 whitespace-nowrap">
-                                                <Link to={"/courses/87579928728"} state={{meetingPassword: '4hzS3h' , lessonName:row.name}}  className="text-white font-medium text-sm text-center py-2 px-4 rounded-lg inline-flex items-center transition transition-all duration-300 hover:scale-105 " style={{backgroundColor:colors.secondColor}}>
+                                                <Link to={"/records/87579928728"} state={{meetingPassword: '4hzS3h' , lessonName:row.name}}  className="text-white font-medium text-sm text-center py-2 px-4 rounded-lg inline-flex items-center transition transition-all duration-300 hover:scale-105 " style={{backgroundColor:colors.secondColor}}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                          stroke-width="1.5" stroke="currentColor" className="w-5 h-5 pl-1">
                                                         <path stroke-linecap="round" stroke-linejoin="round"
