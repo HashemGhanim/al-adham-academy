@@ -2,7 +2,6 @@ import './App.css';
 import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider , Navigate} from "react-router-dom";
 import RootLayout from "./components/RootLayout";
 import HomePage from "./components/homePage/homePage";
-import FirstCompHomePage from "./components/homePage/firstAdInHomePage/firstCompHomePage";
 import LoginPage from "./components/loginPage/loginPage";
 import SignupPage from "./components/signupPage/signupPage";
 import ForgotPassword from "./components/forgotPassword/forgotPassword";
@@ -14,6 +13,9 @@ import CoursePage from "./components/coursePage/coursePage";
 import Courses from "./components/coursesPage/courses";
 import Records from "./components/records/records";
 import RecordPage from "./components/RecordPage/recordPage";
+import Exams from "./components/exams/exams";
+import Exam from "./components/exams/exam/exam";
+
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -25,7 +27,9 @@ const router = createBrowserRouter(
                 <Route path="courses" element={<Courses/>}/>
                 <Route path="courses/:meetingId" element={<CoursePage/>}/>
                 <Route path="records" element={<Records/>}/>
-                <Route path="records/:recordId" element={<RecordPage/>}/>
+                <Route path="records/:recordName" element={<RecordPage/>}/>
+                <Route path="exams" element={<Exams/>}/>
+                <Route path="exams/:examId" element={<Exam/>}/>
                 <Route path="*" element={<NotfoundPage/>}/>
             </Route>
             <Route path="/login" element={<LoginPage/>}/>

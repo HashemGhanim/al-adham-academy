@@ -2,9 +2,10 @@ import React from 'react';
 import PathOfPage from "../common_components/page_path/pathOfPage";
 import colors from "../../GlobalTools/colors";
 import {useLocation, useParams} from "react-router-dom";
+import {CloudinaryContext, Video} from "cloudinary-react";
 
 function RecordPage(props) {
-    const { recordId } = useParams();
+    const { recordName } = useParams();
     const location = useLocation();
     const {lessonName} = location.state || {};
     return (
@@ -23,6 +24,11 @@ function RecordPage(props) {
                     flexWrap: "wrap",
                 }}
             >
+                <div className={"mt-4"}>
+                    <CloudinaryContext cloudName="dqerx3w4l">
+                        <Video publicId={recordName}  controls/>
+                    </CloudinaryContext>
+                </div>
             </main>
         </div>
 
