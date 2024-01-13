@@ -35,7 +35,7 @@ function Footer(props) {
                         <h3 className="tracki uppercase ">Company</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a rel="noopener noreferrer" href="#">Al-Adham Company provides online classes on the company's private browser, to help students accomplish a lot in a short time</a>
+                                <a rel="noopener noreferrer" href="#">Al-Adham Company provides online classes on the company's private website, to help students accomplish a lot in a short time</a>
                             </li>
                         </ul>
                     </div>

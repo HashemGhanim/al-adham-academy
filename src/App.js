@@ -1,5 +1,5 @@
 import './App.css';
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider , Navigate} from "react-router-dom";
+import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Navigate} from "react-router-dom";
 import RootLayout from "./components/RootLayout";
 import HomePage from "./components/homePage/homePage";
 import LoginPage from "./components/loginPage/loginPage";
@@ -15,6 +15,20 @@ import Records from "./components/records/records";
 import RecordPage from "./components/RecordPage/recordPage";
 import Exams from "./components/exams/exams";
 import Exam from "./components/exams/exam/exam";
+import Test from "./Test";
+
+const isAuthenticated = () => {
+    // Implement your logic to check if the user is authenticated
+    return true; // Assuming user is not authenticated for demonstration
+};
+
+const ProtectedRoute = ({ element }) => {
+    return isAuthenticated() ? element : <Navigate to="/login" replace />;
+};
+
+const ProtectedRouteLogin = ({element}) => {
+    return isAuthenticated() ? <Navigate to={"/"} replace/> : element;
+}
 
 
 const router = createBrowserRouter(
@@ -30,10 +44,11 @@ const router = createBrowserRouter(
                 <Route path="records/:recordName" element={<RecordPage/>}/>
                 <Route path="exams" element={<Exams/>}/>
                 <Route path="exams/:examId" element={<Exam/>}/>
+                <Route path="test" element={<ProtectedRoute element={<Test/>} />}/>
                 <Route path="*" element={<NotfoundPage/>}/>
             </Route>
-            <Route path="/login" element={<LoginPage/>}/>
-            <Route path="/signup" element={<SignupPage/>}/>
+            <Route path="/login" element={<ProtectedRouteLogin element={<LoginPage/>} />}/>
+            <Route path="/signup" element={<ProtectedRouteLogin element={<SignupPage/>} />}/>
             <Route path="/forgot-password" element={<ForgotPassword/>}/>
         </>
     )

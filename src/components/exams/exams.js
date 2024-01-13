@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import PathOfPage from "../common_components/page_path/pathOfPage";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import colors from "../../GlobalTools/colors";
 
 
@@ -21,14 +21,16 @@ const getDateFormatted = (duration)=>{
 }
 
 function Exams(props) {
+    const navigation = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
+
     const [rows , setRows] = useState([
         {
             name:'الامتحان الاول',
             courseName:'كيمياء',
             unit : 'الوحدة الاولى',
             start_date:'2024-1-3',
-            end_date:'2024-1-10',
+            end_date:'2024-1-30',
             duration:'00:20:00',
             examAttempt:'1',
             isDisabled : false,
@@ -125,23 +127,23 @@ function Exams(props) {
                                                 <td className="p-4 whitespace-nowrap text-center" >
                                                     {
                                                         userAbleToAttempt(row.end_date, row.duration) ? <button disabled className="text-white font-medium disabled text-sm text-center py-2 px-4 rounded-lg inline-flex items-center opacity-80" style={{backgroundColor:colors.secondColor}}>
-                                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                                viewBox="0 0 24 24" stroke-width="1.5"
-                                                                                stroke="currentColor" className="w-5 h-5 pl-1">
-                                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                                d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
-                                                                                </svg>
-                                                                            حاول إجراء الامتحان
-                                                                            </button> :
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                     viewBox="0 0 24 24" stroke-width="1.5"
+                                                                     stroke="currentColor" className="w-5 h-5 pl-1">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                          d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                                                                </svg>
+                                                                حاول إجراء الامتحان
+                                                            </button> :
                                                             <Link to={"/exams/1"} state={{examName:row.name}} className="text-white font-medium disabled text-sm text-center py-2 px-4 rounded-lg inline-flex items-center transition transition-all duration-300 hover:scale-95 " style={{backgroundColor:colors.secondColor}}>
-                                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                 viewBox="0 0 24 24" stroke-width="1.5"
-                                                                 stroke="currentColor" className="w-5 h-5 pl-1">
-                                                                <path stroke-linecap="round" stroke-linejoin="round"
-                                                                      d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
-                                                            </svg>
-                                                            حاول إجراء الامتحان
-                                                        </Link>
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                                     viewBox="0 0 24 24" stroke-width="1.5"
+                                                                     stroke="currentColor" className="w-5 h-5 pl-1">
+                                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                                          d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+                                                                </svg>
+                                                                حاول إجراء الامتحان
+                                                            </Link>
                                                     }
                                                 </td>
                                             </tr>
@@ -181,6 +183,7 @@ function Exams(props) {
                 </div>
             </div>
         </>
+
     );
 }
 
