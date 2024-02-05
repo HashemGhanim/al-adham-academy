@@ -8,6 +8,7 @@ function Courses(props) {
     const [rows , setRows] = useState([
         {
             name:'التوزيع الالكتروني',
+            meeting_id:'87579928728',
             courseName:'كيمياء',
             unit : 'الوحدة الاولى',
             date:'3/1/2024',
@@ -15,6 +16,7 @@ function Courses(props) {
         },
         {
             name:'مقدمة في الكمياء',
+            meeting_id:'87579928728',
             courseName:'كيمياء',
             unit : 'الوحدة الاولى',
             date:'3/1/2024',
@@ -76,7 +78,7 @@ function Courses(props) {
                                                 {row.time}
                                             </td>
                                             <td className="p-4 whitespace-nowrap">
-                                                <Link to={"/courses/87579928728"} state={{meetingPassword: '4hzS3h' , lessonName:row.name}}  className="text-white font-medium text-sm text-center py-2 px-4 rounded-lg inline-flex items-center transition transition-all duration-300 hover:scale-105 " style={{backgroundColor:colors.secondColor}}>
+                                                <Link to={"/courses/" + row.meeting_id} state={{meetingPassword: '4hzS3h' , lessonName:row.name, meeting_id : row.meeting_id}}  className="text-white font-medium text-sm text-center py-2 px-4 rounded-lg inline-flex items-center transition transition-all duration-300 hover:scale-105 " style={{backgroundColor:colors.secondColor}}>
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                          stroke-width="1.5" stroke="currentColor" className="w-5 h-5 pl-1">
                                                         <path stroke-linecap="round" stroke-linejoin="round"

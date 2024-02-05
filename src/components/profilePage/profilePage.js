@@ -1,9 +1,16 @@
-import React from 'react';
+import React, {useContext, useState} from 'react';
 import {Link} from "react-router-dom";
 import colors from "../../GlobalTools/colors";
 import PathOfPage from "../common_components/page_path/pathOfPage";
+import {UserContext} from "../../App";
 
-function ProfilePage(props) {
+import {Chart as ChartJS} from "chart.js/auto";
+import {Line, Bar , Doughnut} from "react-chartjs-2";
+import getMonthLabels from "../../GlobalTools/Utils";
+import CardOfCourse from "./components/cardOfCourse";
+import DialogOfCard from "./components/dialogOfCard";
+
+const StudentProfile= ()=>{
     return (
         <div className="w-full h-fit rtl box-border overflow-y-scroll px-4 pt-6">
             <PathOfPage names={['الصفحة الشخصية']} mainName={'الصفحة الشخصية'}/>
@@ -125,7 +132,7 @@ function ProfilePage(props) {
                     </div>
                     <div className="bg-white rounded-lg col-span-full max-h-[425.81px] overflow-hidden sm:col-span-1 shadow xl:p-8 sm:p-6 p-4">
                         <h3 className="font-bold text-xl">
-                                نشاط المحفظة
+                            نشاط المحفظة
                         </h3>
                         <div className="h-full w-full relative overflow-y-scroll no-scrollbar">
                             <div className="border-b pb-3 w-full h-fit relative bg-white box-border mt-3">
@@ -215,6 +222,141 @@ function ProfilePage(props) {
                 </div>
             </div>
         </div>
+    );
+}
+
+const InstructorProfile = ()=>{
+    const [show , setShow] = useState(false);
+
+    return(
+        <div className="w-full h-fit rtl box-border overflow-y-scroll px-4 pt-6">
+            <PathOfPage names={['الصفحة الشخصية']} mainName={'الصفحة الشخصية'}/>
+            <div className="grid grid-cols-3 gap-4 p-3">
+                <div className="xl:col-auto rounded-lg col-span-full">
+                    <div className="bg-white rounded-lg shadow xl:p-8 sm:p-6 p-4 mb-4">
+                        <div className="xl:block block sm:flex">
+                            <img src={require('../homePage/teacherComponent/images/adhamKhalaliaPhoto.jpg')} className="h-20 w-20 mb-2 rounded-lg"/>
+                            <div className="sm:mr-4 mr-0 xl:mr-0">
+                                <h2 className="font-bold text-xl m-0 ">
+                                    أدهم خليلية
+                                </h2>
+                                <ul className="list-none m-0 p-0 mt-2 profile-font-color">
+                                    <li className="font-normal text-sm flex items-center">
+                                        <svg
+                                            className="ml-2 w-4 h-4 text-black"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                                                  clip-rule="evenodd"></path>
+                                            <path
+                                                d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"></path>
+                                        </svg>
+                                        أستاذ كيمياء
+                                    </li>
+                                    <li className="font-normal text-sm flex items-center mt-1">
+                                        <svg
+                                            className="ml-2 w-4 h-4 text-black"
+                                            fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                  d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                                                  clip-rule="evenodd"></path>
+                                        </svg>
+                                        طولكرم - فلسطين
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="mb-4">
+                            <address className="not-italic font-normal text-sm ">
+                                <div className="mt-4 profile-font-color">
+                                    الجنس
+                                </div>
+                                <i className="font-medium text-sm text-black not-italic">
+                                    ذكر
+                                </i>
+                                <div className="mt-4 profile-font-color">
+                                    رقم الهوية
+                                </div>
+                                <i className="font-medium text-sm text-black not-italic">
+                                    406722470
+                                </i>
+                                <div className="mt-4 profile-font-color">
+                                    البريد الالكتروني
+                                </div>
+                                <i className="font-medium text-sm text-black not-italic">
+                                    example@gmail.com
+                                </i>
+                                <div className="mt-4 profile-font-color">
+                                    رقم الهاتف
+                                </div>
+                                <i className="font-medium text-sm text-black not-italic">
+                                    0599547282
+                                </i>
+                            </address>
+                        </div>
+                    </div>
+                    <div className="bg-white rounded-lg col-span-full h-[345px] sm:col-span-1 shadow xl:p-8 sm:p-6 p-4">
+                        <h3 className="font-bold text-xl ">
+                            عدد الطلبة
+                        </h3>
+                            <Bar className={"mx-auto my-auto"} data={{
+                                 labels:getMonthLabels(12),
+                                datasets : [
+                                    {
+                                        label:'عدد الطلبة',
+                                        data:[130, 145 , 483, 130, 145 , 390, 130, 145 , 100, 430, 245 , 400],
+                                        backgroundColor:colors.secondColor
+                                    }
+                                ]
+                                }}/>
+                    </div>
+                </div>
+                <div className="xl:col-span-2 col-span-full rounded-lg grid grid-cols-2 gap-4 box-border">
+                    <div className="bg-white rounded-lg col-span-full h-[425.81px] shadow xl:p-8 sm:p-6 p-4 relative">
+                        <h3 className="font-bold text-xl ">
+                            الإيرادات
+                        </h3>
+                        <Bar className="mx-auto" data={{
+                            labels:getMonthLabels(12),
+                            datasets : [
+                                {
+                                    label:'الأرباح الشهرية',
+                                    data:[130, 145 , 483, 130, 145 , 390, 130, 145 , 100, 430, 245 , 400],
+                                    backgroundColor:colors.secondColor
+                                },
+                                {
+                                    label:'أرباح المطورين',
+                                    data:[130/4, 145/4 , 483/4, 130/4, 145/4 , 390/4, 130/4, 145/4 , 100/4, 430/4, 245/4 , 400/4],
+                                    backgroundColor:colors.secondTextColor
+                                }
+                            ]
+                        }}/>
+                    </div>
+                    <div className="bg-white rounded-lg col-span-full shadow xl:p-8 sm:p-6 p-4 h-[425.81px]">
+                        <h3 className="font-bold text-xl inline-block">
+                                بطاقات الدورات
+                        </h3>
+                        <div className="w-full h-[80%] flex flex-row overflow-x-scroll items-center">
+                            <CardOfCourse nameOfCard={"اشتراك فصل"} priceOfCard={"400"} intervalOfCard={"نصف سنة"} numberOfLessonsOfCard={100}/>
+                            <CardOfCourse nameOfCard={"اشتراك وحدة"} priceOfCard={"150"} intervalOfCard={"شهر"} numberOfLessonsOfCard={20}/>
+                            <CardOfCourse nameOfCard={"اشتراك سنة"} priceOfCard={"700"} intervalOfCard={"سنة كاملة"} numberOfLessonsOfCard={200}/>
+                            <CardOfCourse nameOfCard={"اشتراك حصة خاصة"} priceOfCard={"100"} intervalOfCard={"ساعة ونصف"} numberOfLessonsOfCard={1}/>
+                        </div>
+                        <DialogOfCard show={show} setShow={setShow}/>
+                        <button className="inline-block rounded-lg text-white p-2" style={{backgroundColor : colors.secondColor}} onClick={()=> setShow(true)}>
+                            اضافة بطاقة
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+function ProfilePage(props) {
+    const {user, setUser} = useContext(UserContext);
+    return (
+        user.login && user.role === 1 ? <InstructorProfile/> : <StudentProfile/>
     );
 }
 

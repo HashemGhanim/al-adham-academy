@@ -7,6 +7,7 @@ function Courses(props) {
     const [searchTerm, setSearchTerm] = useState('');
     const [rows , setRows] = useState([
         {
+            record_name:'Nodejs_Intro',
             name:'التوزيع الالكتروني',
             courseName:'كيمياء',
             unit : 'الوحدة الاولى',
@@ -14,6 +15,7 @@ function Courses(props) {
             time:'2:30 pm'
         },
         {
+            record_name:'Nodejs_Intro',
             name:'مقدمة في الكمياء',
             courseName:'كيمياء',
             unit : 'الوحدة الاولى',
@@ -72,7 +74,7 @@ function Courses(props) {
                                                     {row.date}
                                                 </td>
                                                 <td className="p-4 whitespace-nowrap">
-                                                    <Link to={"/records/Nodejs_Intro"} state={{lessonName:row.name}}  className="text-white font-medium text-sm text-center py-2 px-4 rounded-lg inline-flex items-center transition transition-all duration-300 hover:scale-105 " style={{backgroundColor:colors.secondColor}}>
+                                                    <Link to={"/records/" + row.record_name} state={{lessonName:row.name, record_name : row.record_name}}  className="text-white font-medium text-sm text-center py-2 px-4 rounded-lg inline-flex items-center transition transition-all duration-300 hover:scale-105 " style={{backgroundColor:colors.secondColor}}>
                                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                              stroke-width="1.5" stroke="currentColor" className="w-5 h-5 pl-1">
                                                             <path stroke-linecap="round" stroke-linejoin="round"

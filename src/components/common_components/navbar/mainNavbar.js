@@ -1,4 +1,4 @@
-import React, {useState , Fragment} from 'react';
+import React, {useState, Fragment, useContext} from 'react';
 import './mainNavbarLogo.png';
 import './mainNavbar.css';
 import {Menu , Transition} from "@headlessui/react";
@@ -7,9 +7,8 @@ import colors from "../../../GlobalTools/colors";
 import fonts from "../../../GlobalTools/fonts";
 import classNames from "classnames";
 import {userImageHandler} from "../../../GlobalTools/common";
-
-
-
+import {IsAuthenticated} from "../../../ProtectedRoutes/ProtectedFile";
+import {UserContext} from "../../../App";
 
 
 const notificationButton = ()=>{
@@ -194,6 +193,7 @@ const mainLinks = ()=>{
 
 function MainNavbar(props) {
     const [authenticated , setAuthenticated] = useState(true);
+    const {user , setUser} = useContext(UserContext);
     return (
         <nav className="flex justify-between my-0 h-[70px] relative"  id="nav-bar-main" style={{background:colors.mainColor}}>
             <div className="flex flex-grow-0 order-2 items-center" id="nav-bar-main-logo">
@@ -217,10 +217,10 @@ function MainNavbar(props) {
             </div>
 
             <div style={{color:colors.whiteColor}} className="my-auto flex justify-center">
-                {authenticated ?
+                {IsAuthenticated() ?
                     <div className="flex justify-center items-center">
                         <div onClick={userImageHandler} className="w-11 h-11 rounded-full mx-3 ml-8 hover:scale-105 cursor-pointer transition transition-all duration-200">
-                            <img src={require('../../../GlobalTools/avatarLogo/9439775.jpg')} className="object-cover rounded-full"/>
+                            <img src={user.role === 0 ? require('../../../GlobalTools/avatarLogo/9439775.jpg') : require('../../homePage/teacherComponent/images/adhamKhalaliaPhoto.jpg')} className="object-cover rounded-full"/>
                         </div>
                         {
                             notificationButton()

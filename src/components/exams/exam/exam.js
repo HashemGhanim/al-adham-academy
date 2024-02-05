@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useLocation, useParams} from "react-router-dom";
+import {Navigate, useLocation, useNavigate, useNavigation, useParams} from "react-router-dom";
 import PathOfPage from "../../common_components/page_path/pathOfPage";
 import colors from "../../../GlobalTools/colors";
 import ReactQuill from "react-quill";
@@ -32,9 +32,10 @@ function Exam(props) {
     ])
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [value, setValue] = useState('');
+    const navigate = useNavigate();
     const { examId } = useParams();
     const location = useLocation();
-    const {examName} = location.state || {};
+    const {examName, exam_id} = location.state || {};
 
     var toolbarOptions = [
         ['bold', 'italic', 'underline', 'strike', 'image'],        // toggled buttons
@@ -55,12 +56,15 @@ function Exam(props) {
 
         ['clean']                                         // remove formatting button
     ];
-
-
     const module = {
         toolbar: toolbarOptions
     }
 
+    useEffect(() => {
+        window.addEventListener('popstate', function(event) {
+            navigate("/exams" , {replace:true})
+        });
+    }, []);
     return (
         <div className="h-fit mb-16">
             <div className="px-4 pt-6 rtl flex justify-between items-end">
@@ -202,11 +206,7 @@ function Exam(props) {
                 </div>
             </form>
         </div>
-
     );
 }
 
 export default Exam;
-
-/*
- */

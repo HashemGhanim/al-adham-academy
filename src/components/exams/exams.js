@@ -26,17 +26,19 @@ function Exams(props) {
 
     const [rows , setRows] = useState([
         {
+            id:'414239',
             name:'الامتحان الاول',
             courseName:'كيمياء',
             unit : 'الوحدة الاولى',
             start_date:'2024-1-3',
-            end_date:'2024-1-30',
+            end_date:'2024-2-6',
             duration:'00:20:00',
             examAttempt:'1',
             isDisabled : false,
             grade:'-'
         },
         {
+            id:'231785',
             name:'الامتحان الثاني',
             courseName:'كيمياء',
             unit : 'الوحدة الاولى',
@@ -135,7 +137,7 @@ function Exams(props) {
                                                                 </svg>
                                                                 حاول إجراء الامتحان
                                                             </button> :
-                                                            <Link to={"/exams/1"} state={{examName:row.name}} className="text-white font-medium disabled text-sm text-center py-2 px-4 rounded-lg inline-flex items-center transition transition-all duration-300 hover:scale-95 " style={{backgroundColor:colors.secondColor}}>
+                                                            <Link to={"/exams/" + row.id} state={{examName:row.name, exam_id:row.id}} className="text-white font-medium disabled text-sm text-center py-2 px-4 rounded-lg inline-flex items-center transition transition-all duration-300 hover:scale-95 " style={{backgroundColor:colors.secondColor}}>
                                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none"
                                                                      viewBox="0 0 24 24" stroke-width="1.5"
                                                                      stroke="currentColor" className="w-5 h-5 pl-1">

@@ -9,7 +9,7 @@ import PathOfPage from "../common_components/page_path/pathOfPage";
 function CoursePage(props) {
     const { meetingId } = useParams();
     const location = useLocation();
-    const { meetingPassword , lessonName} = location.state || {};
+    const { meetingPassword , lessonName , meeting_id} = location.state || {};
 
     const client = ZoomMtgEmbedded.createClient();
 

@@ -225,7 +225,7 @@ function Settings(props) {
                                                className={classNameForLabel()}>كلمة السر الحالية</label>
                                         <input type="password" name="first-name" id="first-name"
                                                className={classNameForInput()}
-                                               placeholder="هاشم" required="" styleInput
+                                               required="" styleInput
                                                placeholder="••••••••"/>
                                     </div>
                                     <div className="col-span-6 sm:col-span-3">
@@ -233,7 +233,7 @@ function Settings(props) {
                                                className={classNameForLabel()}>كلمة السر الجديدة</label>
                                         <input type="password" name="last-name" id="last-name"
                                                className={classNameForInput()}
-                                               placeholder="زرعي" required={true} styleInput
+                                               required={true} styleInput
                                                placeholder="••••••••"/>
                                     </div>
                                     <div className="col-span-6 sm:col-span-3">

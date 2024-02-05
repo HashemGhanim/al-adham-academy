@@ -7,7 +7,7 @@ import {CloudinaryContext, Video} from "cloudinary-react";
 function RecordPage(props) {
     const { recordName } = useParams();
     const location = useLocation();
-    const {lessonName} = location.state || {};
+    const {lessonName , record_name} = location.state || {};
     return (
         <div className="h-[100vh]">
             <div className="px-4 pt-6 rtl border-b flex justify-between items-end">
