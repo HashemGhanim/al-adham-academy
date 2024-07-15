@@ -1,5 +1,4 @@
 import React, {memo, useContext} from 'react';
-import colors from "../../../GlobalTools/colors";
 import {Link} from "react-router-dom";
 
 function NotfoundPage(props) {

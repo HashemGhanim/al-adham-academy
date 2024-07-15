@@ -31,7 +31,7 @@ function Exams(props) {
             courseName:'كيمياء',
             unit : 'الوحدة الاولى',
             start_date:'2024-1-3',
-            end_date:'2024-2-6',
+            end_date:'2024-9-6',
             duration:'00:20:00',
             examAttempt:'1',
             isDisabled : false,

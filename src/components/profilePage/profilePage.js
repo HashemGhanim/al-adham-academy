@@ -224,7 +224,6 @@ const StudentProfile= ()=>{
         </div>
     );
 }
-
 const InstructorProfile = ()=>{
     const [show , setShow] = useState(false);
 

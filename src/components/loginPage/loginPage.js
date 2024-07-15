@@ -45,7 +45,7 @@ function LoginPage(props) {
             </Link>
             <div className="xl:p-0 lg:max-w-screen-lg lg:flex md:mt-0 shadow bg-white rounded-lg items-center justify-center w-full ">
                 <div className="lg:flex w-8/12 hidden h-full">
-                    <img src={require('./images/login-main-image.jpg')} className="rounded-l-lg object-cover"/>
+                    <img src={require('./images/login-main.png')} className="rounded-l-lg object-cover"/>
                 </div>
                 <div className=" lg:p-16 sm:p-8 p-6 w-full">
                     <h2 className="lg:text-3xl text-[#111827] font-bold text-2xl rtl">
@@ -76,7 +76,7 @@ function LoginPage(props) {
                                 نسيت كلمة المرور ؟
                             </Link>
                         </div>
-                        <button type={"submit"} className="mt-6 sm:w-auto text-white font-medium text-base text-center py-3 px-5 rounded-lg ml-auto block bg-[#075471] transition transition-all duration-300 hover:scale-95">
+                        <button type={"submit"} className="mt-6 sm:w-auto text-white font-medium text-base text-center py-3 px-5 rounded-lg ml-auto block bg-[#1E8A69] transition transition-all duration-300 hover:scale-95">
                             تسجيل دخول
                         </button>
                         <div className="pt-6 text-[#6b7280] font-medium text-sm rtl">
